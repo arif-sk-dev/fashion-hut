@@ -604,6 +604,19 @@ footer {
 }
 
 /* cart section start here  */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1001;
+}
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 .cart {
   position: fixed;
   top: 0;

@@ -87,14 +87,22 @@ document.addEventListener("DOMContentLoaded", () => {
     const cartIcon = document.getElementById("cart-icon");
     const cart = document.querySelector(".cart");
     const closeCart = document.getElementById("close-cart");
+    const overlay = document.querySelector("#overlay");
 
     cartIcon.addEventListener("click", (event) => {
       event.stopPropagation(); //Prevent Propagation in cartIcon
       cart.classList.add("active");
+      overlay.classList.add("active");
     });
 
     closeCart.addEventListener("click", () => {
         cart.classList.remove("active");
+        overlay.classList.remove("active");
+    });
+
+    overlay.addEventListener('click', () => {
+      cart.classList.remove("active");
+      overlay.classList.remove("active");
     });
 
     // Close cart when clicking outside of it
