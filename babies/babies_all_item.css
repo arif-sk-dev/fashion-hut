@@ -782,6 +782,14 @@ footer {
   }
       /* header section end here ==========*/
 
+  .container2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    margin-left: 20px;
+  }
+
   .columnAbout,
   .columnHomeLinen {
     display: grid;
