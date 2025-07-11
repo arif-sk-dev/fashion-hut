@@ -447,11 +447,10 @@
  /* product details start here =========== */
 #prodetails {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 30px;
   padding-top: 20px;
-  /* margin: 40px; */
-  padding: 10px;
+  padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   line-height: 9px;
   width: 100%;
@@ -462,28 +461,31 @@
   align-items: center;
   width: 100%;
 }
-.img-section>img {
+.img-section> #main-img {
   width: 100%;
   display: block;
 }
 .img-section img {
-  border: .1px solid #add;
+  border: .1px solid lightgray;
+  border-radius: 5px;
 }
 
 .thumbnails {
   display: flex;
-  gap: 10px;
+  gap: 2%;
   margin-top: 10px;
+  width: 100%;
+  /* display: block; */
 }
-.thumbnails img {
-  width: 24%;
-  border: 2px solid #add;
+.thumbnails>img {
+  width: 23.5%;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
 .details-section {
   line-height: 35px;
+  border-right: 1px solid gray;
 }
 .details-section>h4 {
   font-size: 22px;
@@ -500,21 +502,48 @@
   width: 45px;
   border: 1px solid gray;
 }
-detail-cart-button {
-  padding: 0;
-  /* width: 10px;
-  height: 10px; */
-}
+
 .details-section>p {
   padding-right: 50px;
 }
-/* .cartBtn {
-  background-color: green;
-  color: white;
-  border: 2px solid green;
+
+.additional-info {
+  border: 0.002px solid gray;
   padding: 5px;
-  border-radius: 4px;
-} */
+  width: 100%;
+  border-radius: 5px;
+}
+
+.additional-info> .heading {
+  font-size: 21px;
+  font-weight: 400;
+  text-align: center;
+  padding: 14px;
+  border-bottom: 1px solid gray;
+}
+.additional-info>ul {
+  list-style: none;
+}
+.additional-info>ul>li {
+  padding: 15px;
+}
+.additional-info>ul>li>a {
+  text-decoration: none;
+  color: #656e81;
+  font-size: 15px;
+  display: block;
+  transition: 0.3s;
+}
+.additional-info>ul>li>a>i {
+   padding-left: 10px;
+   padding-right: 15px;
+}
+.additional-info>ul>li>a:hover {
+  color: #93705c;
+  padding-left: 5px;
+  transition: 0.3s ease-in-out;
+}
+
  /* product details end here =========== */
 
 
@@ -583,6 +612,19 @@ footer {
 }
 
 /* cart section start here  */
+.overlay {  /* dark outside the cart area  */
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  z-index: 1001;
+}
+.overlay.active {   /* dark outside the cart area  */
+  opacity: 1;
+  visibility: visible;
+}
 .cart {
   position: fixed;
   top: 0;
@@ -591,7 +633,7 @@ footer {
   bottom: 0;
   width: 320px;
   padding: 20px;
-  background-color: white;
+  background-color: lavender;
   box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
   z-index: 1001;
   transition: 0.4s;
