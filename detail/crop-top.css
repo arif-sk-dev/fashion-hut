@@ -447,7 +447,7 @@
  /* product details start here =========== */
 #prodetails {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 0.8fr;
   gap: 30px;
   padding-top: 20px;
   padding: 30px;
@@ -485,7 +485,9 @@
 
 .details-section {
   line-height: 35px;
-  border-right: 1px solid gray;
+  padding: 5px;
+  /* border: 0.002px solid lightgray; */
+  border-radius: 6px;
 }
 .details-section>h4 {
   font-size: 22px;
@@ -508,40 +510,72 @@
 }
 
 .additional-info {
-  border: 0.002px solid gray;
+  border: 0.002px solid lightgray;
   padding: 5px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
+  height: 100;
 }
 
 .additional-info> .heading {
-  font-size: 21px;
+  font-size: 19px;
   font-weight: 400;
   text-align: center;
   padding: 14px;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid lightgray;
 }
 .additional-info>ul {
   list-style: none;
 }
-.additional-info>ul>li {
+/* .additional-info>ul>li {
   padding: 15px;
-}
+} */
 .additional-info>ul>li>a {
   text-decoration: none;
+  padding: 15px 15px 15px 9px;
   color: #656e81;
-  font-size: 15px;
+  font-size: 13px;
   display: block;
   transition: 0.3s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .additional-info>ul>li>a>i {
-   padding-left: 10px;
-   padding-right: 15px;
+   /* padding-left: 0; */
+   padding-right: 10px;
 }
 .additional-info>ul>li>a:hover {
   color: #93705c;
-  padding-left: 5px;
+  padding-left: 15px;
   transition: 0.3s ease-in-out;
+}
+
+.more-details {
+  border: 1px solid #333;
+  margin: 25px;
+  border-radius: 6px;
+  padding: 20px;
+}
+
+/* .more-details:hover {
+  background-color: #f8f9fa;
+} */
+
+.more-details .heading {
+  font-size: 19px;
+  font-weight: 400;
+  /* text-align: center; */
+  padding-top: 14px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #333;
+}
+.more-details-2 {
+  border: 1px solid #333;
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: lavender;
 }
 
  /* product details end here =========== */
