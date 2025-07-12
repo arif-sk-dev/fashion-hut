@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Fashion Hut/Support Hours</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", sans-serif;
+      background-color: #f4f4f4;
+      align-items: center;
+      justify-content: center;
+      /* height: 100vh; */
+    }
+
+    .back-btn {
+  margin-top: 20px;
+  margin-left: 70px;
+  padding: 7px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.back-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ri-arrow-left-long-fill {
+  font-size: 15px;
+  padding-right: 8px;
+}
+
+    .main {
+      display: grid;
+      grid-template-columns: 1fr;
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 30px;
+      /* border: 0.001px solid lightgray; */
+      /* border-radius: 8px; */
+      /* box-shadow: 0 0 5px rgba(0,0,0,0.1); */
+    }
+
+    .support-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      background-color: #ffffff;
+      padding: 20px 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    .support-container img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .support-text {
+      font-size: 1.2rem;
+      color: #333;
+      font-weight: 500;
+    }
+
+    .article p {
+      padding: 22px;
+      border: 0.001px solid lightgray;
+      /* background-color: #f7f7f7; */
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+    /* footer section  */
+footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer2 {
+  text-align: center;
+}
+.footer2 a:hover {
+  color: beige;
+}
+
+    @media (max-width: 500px) {
+      .main {
+        max-width: 100%;
+        margin: 20px;
+      }
+      .support-container {
+        padding: 15px 20px;
+      }
+      .support-text {
+        font-size: 1rem;
+      }
+      .support-container img {
+        width: 32px;
+        height: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+  <div class="main">
+    <div class="support-container">
+      <img src="../../public/calender.png" alt="Calendar Icon" />
+      <div class="support-text">10am – 8pm Support</div>
+    </div>
+    <div class="article">
+      <p>
+        Whether it’s resolving technical issues, answering product questions, or guiding users through unexpected challenges, all-day support ensures your team remains accessible and responsive. It builds trust, boosts satisfaction, and shows that your brand truly values its customers.
+      </p>
+      <p>
+        With seamless channels like live chat, email, and automated responses backed by knowledgeable agents, round-the-clock support isn’t just an added benefit — it’s an expectation in today’s connected age. And for businesses that offer it, it’s a powerful advantage that sets them apart.
+      </p>
+    </div>
+  </div>
+  <!-- footer section start here  -->
+  <footer>
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

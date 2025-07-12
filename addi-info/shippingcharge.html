@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Fashion Hut/Shipping & Charge</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -30,7 +31,7 @@
       margin: 0;
       font-family: "Poppins";
       background-color: #f8f8f8;
-      color: var(--text-color);
+      color: #656e81;
     }
 
     .header {
@@ -65,8 +66,13 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
+    .ri-arrow-left-long-fill {
+      font-size: 15px;
+      padding-right: 8px;
+    }
+
     .section {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 40px auto;
       background: #fff;
       padding: 30px;
@@ -77,7 +83,6 @@
     .section h2 {
       font-size: 22px;
       margin-bottom: 15px;
-      color: #1f2937;
     }
 
     .section p {
@@ -124,7 +129,7 @@ footer {
     <h1>Shipping & Charge</h1>
   </div><br>
 
-  <button class="back-btn" onclick="goBack()"> << Go Back</button>
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
   <script>
     function goBack() {
       window.history.back();

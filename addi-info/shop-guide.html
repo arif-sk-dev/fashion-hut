@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shopping Guideline</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Fashion Hut/Shopping Guideline</title>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -24,6 +25,9 @@
       max-width: 100%;
       margin: 2rem 3rem;
       padding: 0 1rem;
+      border: .001px solid lightgray;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
     }
     section {
       margin-bottom: 2rem;
@@ -57,6 +61,11 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
+    .ri-arrow-left-long-fill {
+      font-size: 15px;
+      padding-right: 8px;
+    }
+
     .footer2 {
       background-color: #333;
       color: gray;
@@ -75,7 +84,7 @@
     <p>Your step-by-step guide to smart and satisfying purchases</p>
   </header>
 
-  <button class="back-btn" onclick="goBack()"> << Go Back</button>
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
   <script>
     function goBack() {
       window.history.back();

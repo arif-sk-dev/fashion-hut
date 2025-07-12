@@ -15,7 +15,7 @@
     <h1>🚚 All Over Bangladesh</h1>
     <p>Fast, reliable, and nationwide coverage from <br> Dhaka to Teknaf.</p>
   </div>
-  <button class="back-btn" onclick="goBack()"> << Go Back</button>
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
   <script>
     function goBack() {
       window.history.back();
@@ -138,6 +138,12 @@
   background-color: #0056b3;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
+
+.ri-arrow-left-long-fill {
+  font-size: 15px;
+  padding-right: 8px;
+}
+
 .delivery-zone {
   font-size: 14px;
   padding: 70px 70px 30px;
@@ -159,7 +165,7 @@
   background: #f7f7f7;
   padding: 1.2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
  /* delivery details end here =========== */
@@ -196,10 +202,10 @@ footer {
   .delivery-header h1 {
     font-size: 15px;
   }
-  /* .delivery-zone {
-    padding: 20px 50px 60px 30px;
-    width: 100%;
-  } */
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
   
 }
 /* Media Query end here */

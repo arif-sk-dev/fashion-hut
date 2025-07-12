@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Fashion Hut/Return Policy</title>
   <style>
     :root {
@@ -16,7 +17,7 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background-color: var(--bg-light);
-      color: var(--text-dark);
+      color: #656e81;
     }
 
     header {
@@ -40,6 +41,11 @@
     .back-btn:hover {
       background-color: #0056b3;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .ri-arrow-left-long-fill {
+      font-size: 15px;
+      padding-right: 8px;
     }
 
     .container {
@@ -100,7 +106,7 @@ footer {
     <h1>Return Policy</h1>
   </header>
 
-  <button class="back-btn" onclick="goBack()"> << Go Back</button>
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
   <script>
     function goBack() {
       window.history.back();

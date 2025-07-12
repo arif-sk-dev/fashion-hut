@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Payment Method</title>
   <style>
     :root {
@@ -85,6 +85,11 @@
       background-color: #0056b3;
     }
 
+    .ri-arrow-left-long-fill {
+      font-size: 15px;
+      padding-right: 8px;
+    }
+
     footer {
   background-color: #333;
   color: gray;
@@ -129,7 +134,7 @@
     </form>
   </div>
 
-  <button class="back-btn" onclick="goBack()" style="width: 150px; margin: 34px; position: absolute; right: 0;top: -30px;"> << Go Back</button>
+  <button class="back-btn" onclick="goBack()" style="width: 150px; margin: 34px; position: absolute; right: 0;top: -30px;"><i class="ri-arrow-left-long-fill"></i>Back</button>
   <script>
     function goBack() {
       window.history.back();
