@@ -567,11 +567,11 @@
   border-bottom: 1px solid #333;
 }
 .more-details-2 {
-  border: 1px solid #333;
+  border: 0.001px solid lightgray;
   margin-top: 15px;
   padding: 10px;
   border-radius: 8px;
-  /* background-color: lavender; */
+  background-color: #f7f7f7;
   box-shadow: 0 5px 10px rgba(0,0,0,0.2);
 }
 table {
@@ -678,7 +678,7 @@ footer {
   bottom: 0;
   width: 320px;
   padding: 20px;
-  background-color: lavender;
+  background-color: var(--body-color);
   box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
   z-index: 1001;
   transition: 0.4s;
