@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shopping Guideline</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #0066cc;
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    main {
+      /* max-width: 800px; */
+      max-width: 100%;
+      margin: 2rem 3rem;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: #0066cc;
+      margin-top: 1rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+
+    h3, li {
+      color: #656e81;
+    }
+
+    .back-btn {
+  margin-top: 20px;
+  /* padding-left: 0 1rem; */
+  margin-left: 80px;
+  padding: 7px 12px;
+  background-color: #097ade;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.back-btn:hover {
+  background-color: red;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+    .footer2 {
+      background-color: #333;
+      color: gray;
+      padding-top: 22px;
+      padding-bottom: 17px;
+      text-align: center;
+      align-items: center;
+      font-size: 12.8px;
+      line-height: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Shopping Guideline</h1>
+    <p>Your step-by-step guide to smart and satisfying purchases</p>
+  </header>
+
+  <button class="back-btn" onclick="goBack()"> << Go Back</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <main>
+    <section>
+      <h3>1. Research Before Buying</h3>
+      <ul>
+        <li>Compare brands, reviews, and prices.</li>
+        <li>Read product descriptions carefully.</li>
+        <li>Check return and warranty policies.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>2. Know What You Need</h3>
+      <ul>
+        <li>Create a list to avoid impulse purchases.</li>
+        <li>Set your budget before browsing.</li>
+        <li>Consider long-term value over quick savings.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>3. Use Trusted Platforms</h3>
+      <ul>
+        <li>Choose well-known online stores or verified sellers.</li>
+        <li>Check for secure payment gateways.</li>
+        <li>Be wary of deals that seem too good to be true.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>4. Post-Purchase Tips</h3>
+      <ul>
+        <li>Keep your receipts and confirmation emails.</li>
+        <li>Leave honest reviews to help other shoppers.</li>
+        <li>Track delivery and stay in touch with the seller if needed.</li>
+      </ul>
+    </section>
+  </main>
+
+  <div class="footer2">
+    COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+    <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+  </div>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
