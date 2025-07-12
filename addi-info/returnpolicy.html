@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fashion Hut/Return Policy</title>
+  <style>
+    :root {
+      --primary-color: #1e90ff;
+      --bg-light: #f9f9f9;
+      --text-dark: #333;
+      --section-padding: 1.5rem;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+
+    header {
+      background-color: var(--primary-color);
+      color: white;
+      padding: var(--section-padding);
+      text-align: center;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      margin-left: 110px;
+      padding: 7px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .back-btn:hover {
+      background-color: #0056b3;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: var(--section-padding);
+      background: white;
+      box-shadow: 0 0 12px rgba(0,0,0,0.08);
+      margin-top: 1rem;
+    }
+
+    h1, h2 {
+      margin-bottom: 0.5rem;
+    }
+
+    ul, ol {
+      padding-left: 1.2rem;
+    }
+
+    p {
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer Section ============== */
+footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer2 {
+  text-align: center;
+}
+.footer2 a:hover {
+  color: beige;
+}
+
+    @media (350px <= width <=768px) {
+      .container {
+        padding: 1rem;
+      }
+
+      header {
+        font-size: 0.9rem;
+      }
+
+      .back-btn {
+        margin-left: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Return Policy</h1>
+  </header>
+
+  <button class="back-btn" onclick="goBack()"> << Go Back</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <main class="container">
+    <section>
+      <h2>Overview</h2>
+      <p>We want you to love your purchase! If you're not satisfied, we gladly accept returns within <strong>30 days</strong> of delivery, subject to the conditions below.</p>
+    </section>
+
+    <section>
+      <h2>Return Conditions</h2>
+      <ul>
+        <li>Items must be unused, unwashed, and in original condition.</li>
+        <li>Original packaging and tags must be intact.</li>
+        <li>Proof of purchase (receipt or order confirmation) is required.</li>
+        <li>Sale and clearance items are non-returnable.</li>
+        <li>Shipping fees are non-refundable.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Steps to Initiate a Return</h2>
+      <ol>
+        <li>Email us at <em>returns@yourstore.com</em> with your order number and reason for return.</li>
+        <li>Repackage the item securely with original materials.</li>
+        <li>Ship to: <br><strong>[Your Return Address Here]</strong></li>
+        <li>You'll receive confirmation and refund within 7–10 business days of item receipt.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Exchanges</h2>
+      <p>To exchange an item, indicate your desired product in your return request. We'll ship the replacement once we receive your return.</p>
+    </section>
+
+    <section>
+      <h2>Need Help?</h2>
+      <p>Questions? Reach out anytime at <em>support@yourstore.com</em>. We’re here to help.</p>
+    </section>
+  </main>
+
+  <!-- Footer section start here=========== -->
+    <footer>
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>

@@ -12,8 +12,8 @@
 <body>
   <!-- delivery details section start here ========= -->
   <div class="delivery-header">
-    <h1>🚚 Delivering All Over Bangladesh</h1>
-    <p>Fast, reliable, and nationwide coverage from Dhaka to Teknaf.</p>
+    <h1>🚚 All Over Bangladesh</h1>
+    <p>Fast, reliable, and nationwide coverage from <br> Dhaka to Teknaf.</p>
   </div>
   <button class="back-btn" onclick="goBack()"> << Go Back</button>
   <script>
@@ -22,7 +22,7 @@
     }
   </script>
 
-  <div class="delivery-zone" style="padding: 70px 80px 30px; width: 100%;">
+  <div class="delivery-zone">
     <h2>📦 Delivery Zones</h2>
     <div class="delivery-zones">
       <p><i class="ri-checkbox-fill"></i>Dhaka Metropolitan Area</p>
@@ -125,7 +125,7 @@
 
 .back-btn {
   margin-top: 20px;
-  margin-left: 80px;
+  margin-left: 70px;
   padding: 7px 12px;
   background-color: #007bff;
   color: white;
@@ -138,8 +138,10 @@
   background-color: #0056b3;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
-.delivery-zones {
+.delivery-zone {
   font-size: 14px;
+  padding: 70px 70px 30px;
+  width: 100%;
 }
 .delivery-zones i {
   padding-right: 10px;
@@ -150,7 +152,7 @@
 .grid {
   display: grid;
   gap: 1.5rem;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
 }
 
 .card {
@@ -183,7 +185,7 @@ footer {
 
   .delivery-header {
     height: 140px;
-    width: 100%;
+    /* width: 100%; */
     background-color: #097ade;
     color: white;
     text-align: center;
@@ -192,8 +194,13 @@ footer {
     line-height: 35px;
   }
   .delivery-header h1 {
-    font-size: 17px;
+    font-size: 15px;
   }
+  /* .delivery-zone {
+    padding: 20px 50px 60px 30px;
+    width: 100%;
+  } */
+  
 }
 /* Media Query end here */
     </style>
