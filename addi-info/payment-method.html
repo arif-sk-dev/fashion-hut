@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Payment Method</title>
+  <style>
+    :root {
+      --primary-color: #007bff;
+      --bg-color: #f9f9f9;
+      --text-color: #333;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      /* max-width: 480px; */
+      max-width: 40vw;
+      background: #fff;
+      margin: 60px auto;
+      padding: 30px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+    }
+
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .header img {
+      width: 30px;
+      height: auto;
+    }
+
+    .header h2 {
+      font-size: 22px;
+      color: var(--text-color);
+      margin: 0;
+    }
+
+    form {
+      margin-right: 15px;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: 5px;
+      display: block;
+      color: var(--text-color);
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    button {
+      display: flex;
+      background-color: var(--primary-color);
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 4px;
+      width: 100%;
+      transition: background 0.3s;
+      /* text-align: center; */
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer2 {
+  text-align: center;
+}
+.footer2 a:hover {
+  color: beige;
+}
+@media (min-width: 1024px) {
+  container {
+    margin: 10px;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <i class="ri-bank-card-fill" style="font-size: 27px;"></i>
+      <h2>Payment Method</h2>
+    </div>
+    <form>
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" name="cardNumber" required />
+
+      <label for="cardName">Name on Card</label>
+      <input type="text" id="cardName" name="cardName" required />
+
+      <label for="expiryDate">Expiry Date</label>
+      <input type="text" id="expiryDate" name="expiryDate" placeholder="MM/YY" required />
+
+      <label for="cvv">CVV</label>
+      <input type="text" id="cvv" name="cvv" required />
+
+      <button type="submit">Submit Payment</button>
+    </form>
+  </div>
+
+  <button class="back-btn" onclick="goBack()" style="width: 150px; margin: 30px; position: absolute; right: 0;top: -30px;"> << Go Back</button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <!-- Footer section start here=========== -->
+    <footer style="position: relative; bottom: 0;">
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script> 
+</body>
+</html>
