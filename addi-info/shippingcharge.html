@@ -36,20 +36,15 @@
 
     .header {
       /* background-color: #1f2937; */
-      background-color: #097ade;
+      background-color: #0066cc;
       color: white;
-      padding: 20px;
+      padding: 1.2rem;
       text-align: center;
     }
-
     .header h1 {
-      margin: 0;
-      font-size: 28px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 10px;
+      font-size: clamp(1rem, calc(2.3vw + 1rem), 3.5rem);
     }
+   
   .back-btn {
     margin-top: 20px;
     margin-left: 80px;
@@ -66,10 +61,13 @@
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   }
 
-    .ri-arrow-left-long-fill {
-      font-size: 15px;
-      padding-right: 8px;
-    }
+  .ri-arrow-left-long-fill {
+    font-size: 15px;
+    padding-right: 8px;
+  }
+  .home {
+    margin-left: 0;
+  }
 
     .section {
       max-width: 1000px;
@@ -119,7 +117,6 @@ footer {
     margin-left: 10vw;
   }
 }
-
   </style>
 
 </head>
@@ -130,6 +127,7 @@ footer {
   </div><br>
 
   <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
+  <button class="back-btn home" onclick="window.location.href='/'"><i class="ri-home-8-line"></i></button>
   <script>
     function goBack() {
       window.history.back();

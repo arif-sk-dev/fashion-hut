@@ -4,8 +4,7 @@
   "codesnap.showLineNumbers": false,
   "codesnap.showWindowTitle": true,
   "files.autoSave": "afterDelay",
-  "editor.fontFamily": "Fira Code",
-  "editor.fontSize": 20,
+  "editor.fontSize": 21,
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#1a1a1a",
     "activityBar.background": "#1a1a1a",

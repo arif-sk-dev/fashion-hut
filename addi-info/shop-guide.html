@@ -19,6 +19,13 @@
       color: white;
       padding: 1.5rem;
       text-align: center;
+      line-height: .6;
+    }
+    header h1 {
+      font-size: clamp(1.2rem, calc(3vw + 1rem), 3.5rem);
+    }
+    header p {
+      font-size: clamp(.2rem, calc(2vw + .2rem), 2.5rem);
     }
     main {
       /* max-width: 800px; */
@@ -61,10 +68,13 @@
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-    .ri-arrow-left-long-fill {
-      font-size: 15px;
-      padding-right: 8px;
-    }
+.ri-arrow-left-long-fill {
+  font-size: 15px;
+  padding-right: 8px;
+}
+.home {
+  margin-left: 0;
+}
 
     .footer2 {
       background-color: #333;
@@ -85,6 +95,7 @@
   </header>
 
   <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
+  <button class="back-btn home" onclick="window.location.href='/'"><i class="ri-home-8-line"></i></button>
   <script>
     function goBack() {
       window.history.back();

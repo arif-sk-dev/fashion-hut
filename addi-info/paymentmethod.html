@@ -67,27 +67,43 @@
       font-size: 16px;
     }
 
-    button {
-      display: flex;
+    .back-btn {
+  margin-top: 20px;
+  margin-left: 70px;
+  padding: 7px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.home {
+  margin-left: 0;
+}
+.back-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ri-arrow-left-long-fill {
+  font-size: 15px;
+  padding-right: 8px;
+}
+
+    .submitbtn {
       background-color: var(--primary-color);
       color: white;
       border: none;
-      padding: 12px;
+      padding: 7px 12px;
       font-size: 16px;
       cursor: pointer;
       border-radius: 4px;
-      width: 100%;
-      transition: background 0.3s;
-      /* text-align: center; */
+      transition: 0.3s;
     }
 
-    button:hover {
+    .submitbtn:hover {
       background-color: #0056b3;
-    }
-
-    .ri-arrow-left-long-fill {
-      font-size: 15px;
-      padding-right: 8px;
     }
 
     footer {
@@ -112,6 +128,14 @@
   </style>
 </head>
 <body>
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
+  <button class="back-btn home" onclick="window.location.href='/'"><i class="ri-home-8-line"></i></button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
   <div class="container">
     <div class="header">
       <i class="ri-bank-card-fill" style="font-size: 27px;"></i>
@@ -130,16 +154,9 @@
       <label for="cvv">CVV</label>
       <input type="text" id="cvv" name="cvv" required />
 
-      <button type="submit">Submit Payment</button>
+      <button type="submit" class="submitbtn">Submit Payment</button>
     </form>
   </div>
-
-  <button class="back-btn" onclick="goBack()" style="width: 150px; margin: 34px; position: absolute; right: 0;top: -30px;"><i class="ri-arrow-left-long-fill"></i>Back</button>
-  <script>
-    function goBack() {
-      window.history.back();
-    }
-  </script>
 
   <!-- Footer section start here=========== -->
     <footer style="position: relative; bottom: 0;">

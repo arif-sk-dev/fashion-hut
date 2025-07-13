@@ -13,9 +13,10 @@
   <!-- delivery details section start here ========= -->
   <div class="delivery-header">
     <h1>🚚 All Over Bangladesh</h1>
-    <p>Fast, reliable, and nationwide coverage from <br> Dhaka to Teknaf.</p>
+    <p>Fast, reliable, and nationwide coverage from Dhaka to Teknaf.</p>
   </div>
   <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
+  <button class="back-btn home" onclick="window.location.href='/'"><i class="ri-home-8-line"></i></button>
   <script>
     function goBack() {
       window.history.back();
@@ -39,15 +40,15 @@
     <div class="grid">
       <div class="card">
         <h3>Same-Day Delivery</h3>
-        <p>Available in Dhaka for orders placed before noon.</p>
+        <p>Available in Dhaka for orders placed before noon. Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid minus soluta eligendi tempore explicabo exercitationem dolore impedit tenetur labore id.</p>
       </div>
       <div class="card">
         <h3>Real-Time Tracking</h3>
-        <p>Stay updated with live shipment notifications.</p>
+        <p>Stay updated with live shipment notifications. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis sed corporis optio illo. Aliquam sit accusamus blanditiis impedit dolorum veniam.</p>
       </div>
       <div class="card">
         <h3>Cash on Delivery</h3>
-        <p>Convenient payment options at your doorstep.</p>
+        <p>Convenient payment options at your doorstep. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Assumenda, laudantium possimus porro sint facere dignissimos quo ipsa totam non! Qui.</p>
       </div>
     </div>
   </div>
@@ -104,24 +105,29 @@
       /* border: 1px solid red; */
     }
     body {
+      margin: 0;
+      padding: 0;
       font-family: var(--body-font);
       font-size: small;
-      /* font-size: var(--normal-font-size); */
       background-color: var(--body-color);
       color: var(--text-color);
     }
 
  /* delivery details start here =========== */
 .delivery-header {
-  height: 200px;
-  max-width: 100%;
-  background-color: #097ade;
+  /* margin: 0; */
+  padding: 1.5rem;
+  background-color: #0066cc;
   color: white;
   text-align: center;
-  align-content: center;
-  font-weight: 400;
-  line-height: 50px;
 }
+
+.delivery-header h1 {
+      font-size: clamp(1.2rem, calc(3vw + .5rem), 3.5rem);
+    }
+.delivery-header p {
+      font-size: clamp(.2rem, calc(2vw + .17rem), 2.5rem);
+    }
 
 .back-btn {
   margin-top: 20px;
@@ -133,6 +139,9 @@
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
+}
+.home {
+  margin-left: 0;
 }
 .back-btn:hover {
   background-color: #0056b3;
@@ -147,7 +156,7 @@
 .delivery-zone {
   font-size: 14px;
   padding: 70px 70px 30px;
-  width: 100%;
+  max-width: 100%;
 }
 .delivery-zones i {
   padding-right: 10px;
@@ -159,6 +168,7 @@
   display: grid;
   gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  max-width: 100%;
 }
 
 .card {
@@ -167,9 +177,7 @@
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
  /* delivery details end here =========== */
-
 
 /* Footer Section ============== */
 footer {
@@ -188,25 +196,13 @@ footer {
 
 /* Media Query start here  */
 @media (350px <= width <=768px) {
-
   .delivery-header {
-    height: 140px;
-    /* width: 100%; */
-    background-color: #097ade;
-    color: white;
-    text-align: center;
-    align-content: center;
-    font-weight: 400;
-    line-height: 35px;
-  }
-  .delivery-header h1 {
-    font-size: 15px;
+    width: 100%;
   }
   .grid {
     display: grid;
     grid-template-columns: 1fr;
   }
-  
 }
 /* Media Query end here */
     </style>
