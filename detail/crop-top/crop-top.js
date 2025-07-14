@@ -261,3 +261,28 @@ smallImg[3].onclick = function() {
   mainImg.src = smallImg[3].src;
 }
 // Details section end here 
+
+//Popup section start here 
+document.addEventListener("DOMContentLoaded", () => {
+  const openPopup = document.getElementById("openSizeGuide");
+  const popup = document.querySelector(".popup-content");
+  const closePopup = document.getElementById("closeSizeGuide");
+  const overlay = document.querySelector("#popupOverlay");
+
+  openPopup.addEventListener('click', () => {
+    popup.classList.add("active");
+    overlay.classList.add("active");
+  });
+
+  closePopup.addEventListener('click', () => {
+    popup.classList.remove("active");
+    // console.log("hide");
+    overlay.classList.remove("active");
+  });
+
+  overlay.addEventListener('click', ()=> {
+    popup.classList.remove("active");
+    overlay.classList.remove("active");
+  });
+});
+//Popup section end here 
