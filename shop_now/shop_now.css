@@ -953,6 +953,9 @@ footer {
         width: 100%;
         padding: 30px;
       }
+      .video-screenshot p {
+        margin-top: 0;
+      }
 
       .video-section {  /* a video will be add next  */
         display: grid;

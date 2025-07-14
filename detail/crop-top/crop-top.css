@@ -590,34 +590,7 @@ table td {
   color: white;
   text-align: left;
 }
-
  /* product details end here =========== */
-
-
-/* handmade-embroideries section start here  */
-.handmade-embroideries {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
-  justify-items: center;
-  gap: 20px;
-  align-items: stretch;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  overflow: hidden;
-}
-.handmadeCard img {
-  height: 220px;
-  width: 200px;
-  border-radius: 5px;
-  transition: transform 0.3s ease-in-out;
-}
-.handmadeCard img:hover {
-  transform: scale(1.05);
-}
-/* handmade-embroideries section end here  */
 
 /* Footer Section ============== */
 footer {
@@ -704,8 +677,10 @@ footer {
   position: absolute;
   font-size: 20px;
   padding: 4px;
+  background-color: rgb(8, 165, 8);
+  color: white;
   border-radius: 50px;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 .add-cart:hover {
   background-color: green;
