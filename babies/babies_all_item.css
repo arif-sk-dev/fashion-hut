@@ -451,7 +451,7 @@
 /* card section start here  */
 .cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   justify-content: center;
   justify-items: center;
   gap: 20px;
@@ -461,8 +461,9 @@
   padding-top: 10px;
 }
 .cards img {
-  height: 220px;
-  width: 240px;
+  /* height: 220px; */
+  /* width: 240px; */
+  max-width: 100%;
   border-radius: 5px;
   transition: transform 0.3s ease-in-out;
   position: relative;
@@ -485,8 +486,7 @@
   font-size: 18px;
   background: rgba(0, 0, 0, 0.3);
 }
-
-/* main card 2 section start here  */
+/* main card 2 section end here  */
 
 /* card section end here */
 /* pagination start here  */
@@ -495,16 +495,11 @@
   display: flex;
   justify-content: right;
   margin-right: 54px;
-  /* align-content: right; */
   gap: 15px;
 }
-#pageButtons {
-  gap: 5px;
-  cursor: pointer;
-}
 .active {
-  /* background-color: gray; */
   color: white;
+  background-color: green;
 }
 
   /* pagination end here */
