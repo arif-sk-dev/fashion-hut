@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const addCart = document.querySelectorAll(".add-cart");
     const cartCount = document.getElementById("cart-count");
 
-    let productCount = 0;
+    let productCount = 0; //for Cart Count 
     const addedProducts = new Set(); //Track unique Product IDs
 
     cartIcon.addEventListener("click", (event) => {
@@ -128,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
             // Add fallback if product-id attribute isn't present
         let productId = productCard.getAttribute("product-id");
           if (!productId) {
-            productId = `fallback-id-${index}`; // Unique fallback ID
+            productId = `fallback-id-${index}`; // Unique fallback ID instead of product ID
           }
 
           if (!addedProducts.has(productId)) {
@@ -154,7 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
     var removeCartButtons = document.getElementsByClassName("cart-remove");
     // console.log("removeCartButtons");
     // console.log("remove Cart");
-    
     for (var i=0; i < removeCartButtons.length; i++) {
         var button = removeCartButtons[i]
         button.addEventListener('click', removeCartItem);
@@ -264,5 +263,15 @@ function updatetotal() {
     document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
 // Cart section end here ============
+
+const cart = document.getElementById("rajj-rana-sohel-roni");
+const dom = document.querySelector("#rajj-rana-sohel-roni");
+
+const dom = document.getElementsByClassName("rajjjjj");
+const dom = document.querySelector(".rajjjjjj");
+
+document.querySelectorAll(".active");
+add("active");
+remove("active");
 
 

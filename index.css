@@ -839,7 +839,6 @@ footer {
 /* cart section end here  */
 
 /* ================= Media Query start here ================ */
-/* @media (max-width: 428px) {   */
 @media (350px <= width <=768px) {
   .header1 {
     display: none;
