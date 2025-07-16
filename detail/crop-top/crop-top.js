@@ -82,12 +82,17 @@ function closeUserLoginReg() {
 // Login page end here 
 
 // Cart section start here =========
-
 document.addEventListener("DOMContentLoaded", () => {
     const cartIcon = document.getElementById("cart-icon");
     const cart = document.querySelector(".cart");
     const closeCart = document.getElementById("close-cart");
     const overlay = document.querySelector("#overlay");
+
+    const addCart = document.querySelectorAll(".add-cart");
+    const cartCount = document.getElementById("cart-count");
+
+    let productCount = 0;
+    const addedProducts = new Set(); //Track unique Product IDs
 
     cartIcon.addEventListener("click", (event) => {
       event.stopPropagation(); //Prevent Propagation in cartIcon
@@ -103,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
     overlay.addEventListener('click', () => {
       cart.classList.remove("active");
       overlay.classList.remove("active");
-    })
+    });
 
     // Close cart when clicking outside of it
     document.addEventListener('click', (event) => {
@@ -116,8 +121,25 @@ document.addEventListener("DOMContentLoaded", () => {
     cart.addEventListener('click', (event) => {
       event.stopPropagation();
     });
-});
 
+      // add unique product to cart 
+    addCart.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        const productCard = button.closest(".pro");
+            // Add fallback if product-id attribute isn't present
+        let productId = productCard.getAttribute("product-id");
+          if (!productId) {
+            productId = `fallback-id-${index}`; // Unique fallback ID
+          }
+
+          if (!addedProducts.has(productId)) {
+            addedProducts.add(productId);
+            productCount++;
+            cartCount.textContent = productCount;
+          }
+      });
+    });
+});  //end -----
 
 // cart working
   if(document.readyState == "loading") {

@@ -106,6 +106,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeCart = document.getElementById("close-cart");
     const overlay = document.querySelector("#overlay");
 
+    const addCart = document.querySelectorAll(".add-cart");
+    const cartCount = document.getElementById("cart-count");
+
+    let productCount = 0;
+    const addedProducts = new Set(); //Track unique Product IDs
+
     cartIcon.addEventListener("click", (event) => {
       event.stopPropagation(); //Prevent Propagation in cartIcon
       cart.classList.add("active");
@@ -133,7 +139,25 @@ document.addEventListener("DOMContentLoaded", () => {
     cart.addEventListener('click', (event) => {
       event.stopPropagation();
     });
-});
+
+      // add unique product to cart 
+    addCart.forEach((button, index) => {
+      button.addEventListener("click", () => {
+        const productCard = button.closest(".pro");
+            // Add fallback if product-id attribute isn't present
+        let productId = productCard.getAttribute("product-id");
+          if (!productId) {
+            productId = `fallback-id-${index}`; // Unique fallback ID
+          }
+
+          if (!addedProducts.has(productId)) {
+            addedProducts.add(productId);
+            productCount++;
+            cartCount.textContent = productCount;
+          }
+      });
+    });
+});  //end -----
 
 
 // cart working
@@ -147,10 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
   function ready() {
 
     // Remove items from cart
-    var removeCartButtons = document.getElementsByClassName("cart-remove");
-    // console.log("removeCartButtons");
-    // console.log("remove Cart");
-    
+    var removeCartButtons = document.getElementsByClassName("cart-remove");    
     for (var i=0; i < removeCartButtons.length; i++) {
         var button = removeCartButtons[i]
         button.addEventListener('click', removeCartItem);

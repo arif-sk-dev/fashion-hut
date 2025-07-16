@@ -207,7 +207,7 @@
       <div class="icons">
         <i onclick="openSearch()" class="ri-search-line"></i>
         <i onclick="userLoginReg()" class="ri-account-circle-line"></i>
-        <i class="ri-shopping-cart-2-line" id="cart-icon" style="cursor: pointer; padding: 8px;"></i>
+        <i class="ri-shopping-cart-2-line" id="cart-icon" style="cursor: pointer; padding: 8px;"><span class="cart-count" id="cart-count" style="font-size: 15px;">0</span></i>
       </div> 
     </div>
   </header>
@@ -269,6 +269,7 @@
 
  <!-- cart section start here ================= -->
   <div class="overlay" id="overlay"></div> <!-- for dark overlay outside the card -->
+  <!-- <div class="cart-count" id="cart-count"></div> -->
   <div class="cart">
     <h3 class="cart-title">Your Cart</h3>
     <!-- content -->
@@ -380,7 +381,6 @@ document.querySelector(".slideshow-container").addEventListener("mouseleave", st
     <div class="imgCard1" onclick="window.location.href='babies/babies_all_item.html'">
       <img src="public/Screenshot_2.png" alt="">
       <a href=""  class="text">Baby & Kids</a>
-      <!-- <div class="text">Baby & Kids</div> -->
     </div>
     <div class="imgCard1" onclick="window.location.href='women/women.html'">
       <img src="public/Screenshot_7.png" alt="">
@@ -657,7 +657,7 @@ document.querySelector(".slideshow-container").addEventListener("mouseleave", st
   </div>
 
   <div class="handmade-embroideries" style="background-color: #f9f7f4;"">
-    <div class="handmadeCard pro">
+    <div class="handmadeCard pro" product-id="10">
       <img class="productImg" src="public/embroideries/embroideries1.png" alt="">
       <div class="des">
         <h5 class="product-title">Mini Orange</h5>
@@ -668,7 +668,7 @@ document.querySelector(".slideshow-container").addEventListener("mouseleave", st
       </div>      
     </div>
 
-    <div class="handmadeCard pro">
+    <div class="handmadeCard pro" product-id="11">
       <img class="productImg" src="public/embroideries/embroideries2.png" alt="">
       <div class="des">
         <h5 class="product-title">Mini Half Orange</h5>
