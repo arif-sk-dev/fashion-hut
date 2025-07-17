@@ -452,8 +452,15 @@
 /*======Main section start here ========= */
 .shopNowBanner {
   display: block;
-  /* height: 80vh; */
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+main {
+  position: relative;
+  z-index: 2;
+  background-color: var(--body-color);
 }
 
 .card1 {
@@ -658,6 +665,8 @@ video {
 
 /* Footer Section start here ========== */
 footer {
+  position: relative;
+  z-index: 3;
   background-color: #333;
   color: gray;
   padding: 20px;
@@ -934,6 +943,21 @@ footer {
     text-align: center;
   }
       /* header section end here ==========*/
+
+      /* banner section start here  */
+  /* .shopNowBanner {
+  display: block;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+main {
+  position: relative;
+  z-index: 2;
+  background-color: var(--body-color);
+} */
+      /* banner section start here  */
 
   .columnAbout,
   .columnHomeLinen {

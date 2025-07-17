@@ -264,14 +264,5 @@ function updatetotal() {
 }
 // Cart section end here ============
 
-const cart = document.getElementById("rajj-rana-sohel-roni");
-const dom = document.querySelector("#rajj-rana-sohel-roni");
-
-const dom = document.getElementsByClassName("rajjjjj");
-const dom = document.querySelector(".rajjjjjj");
-
-document.querySelectorAll(".active");
-add("active");
-remove("active");
 
 

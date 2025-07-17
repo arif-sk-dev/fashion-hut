@@ -445,12 +445,19 @@
       text-align: center;
     }
 
-
 /*======Main section start here ========= */
 .shopNowBanner {
   display: block;
-  /* height: 80vh; */
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+main {
+  position: relative;
+  z-index: 2;
+  background-color: var(--body-color);
 }
 
 .card1 {
@@ -645,6 +652,8 @@
 /* Footer Section  */
 footer {
   background-color: #333;
+  position: relative;
+  z-index: 3;
   color: gray;
   padding: 20px;
   width: 100vw;

@@ -4,7 +4,7 @@
   "codesnap.showLineNumbers": false,
   "codesnap.showWindowTitle": true,
   "files.autoSave": "afterDelay",
-  "editor.fontSize": 21,
+  "editor.fontSize": 21.5,
   "workbench.colorCustomizations": {
     "activityBar.activeBackground": "#1a1a1a",
     "activityBar.background": "#1a1a1a",
