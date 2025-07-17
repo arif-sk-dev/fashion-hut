@@ -463,14 +463,12 @@ main {
   background-color: var(--body-color);
 }
 
-.card1 {
+.card1, .card2, .card4, .card5 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
   justify-items: center;
   gap: 20px;
   align-items: stretch;
-  /* padding: 34px; */
   overflow: hidden;
   padding-bottom: 20px;
   padding-left: 50px;
@@ -481,17 +479,13 @@ main {
   height: 230px;
   cursor: pointer;
   margin-bottom: 40px;
-  /* padding-top: 30px; */
-  /* padding-bottom: 30px; */
 }
 .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  transition: 0.3s ease-in-out;
-  /* transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out; */
-  /* padding-bottom: 30px; */
+  /* transition: 0.3s ease-in-out; */
 }
 .card-inner img {
   height: 220px;
@@ -500,7 +494,7 @@ main {
 }
 .flipCard:hover .card-inner {
   transform: rotateY(180deg);
-    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out;
+  /* transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out; */
 }
 
 .card-front,
@@ -514,152 +508,6 @@ main {
 .card-back {
   transform: rotateY(180deg);
 }
-
-/* card2 section start here  */
-.card2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  /* justify-content: center; */
-  justify-items: center;
-  gap: 20px;
-  align-items: stretch;
-  /* padding: 34px; */
-  overflow: hidden;
-  padding-bottom: 20px;
-  padding-left: 50px;
-  padding-right: 50px;
-}
-
-.flipCard2 {
-  width: 240px;
-  height: 260px;
-  cursor: pointer;
-  margin-bottom: 40px;
-  /* padding-top: 30px; */
-  /* padding-bottom: 30px; */
-}
-
-.card-inner2 {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  /* transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out; */
-  /* padding-bottom: 30px; */
-}
-.card-inner2 img {
-  height: 260px;
-  width: 240px;
-  border-radius: 5px;
-}
-.flipCard2:hover .card-inner2 {
-  transform: rotateY(180deg);
-    transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out;
-}
-
-.card-front,
-.card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-}
-
-.card-back {
-  transform: rotateY(180deg);
-}
-
-/* card 2 section end here  */
-
-/* card 3 section start here  */
-/* handmade-embroideries section start here  */
-.handmade-embroideries {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
-  justify-items: center;
-  gap: 30px;
-  align-items: stretch;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  overflow: hidden;
-}
-.handmadeCard {
-  overflow: hidden;
-  border-radius: 5px;
-}
-
-.handmadeCard img {
-  height: 220px;
-  width: 200px;
-  border-radius: 5px;
-  transition: transform 0.3s ease-in-out;
-  cursor: pointer;
-}
-.handmadeCard img:hover {
-  transform: scale(1.06);
-}
-.handmadeCard i {
-  cursor: pointer;
-}
-/* card 3 section end here */
-
-.video-screenshot {
-  display: flex;
-}
-.video-screenshot>img {
-  display: block;
-  width: 42%;
-  padding: 50px;
-}
-
-/* card 4 section start here  */
-.card4 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
-  justify-items: center;
-  gap: 20px;
-  align-items: stretch;
-  /* padding: 34px; */
-  overflow: hidden;
-  padding-bottom: 20px;
-  padding-left: 50px;
-  padding-right: 50px;  /* card 4 section's other css are in card1 css  */
-}
-/* card 4 section end here  */
-
- /* video section start here  */
-.video-section {
-  display: flex;
-  margin: 60px;
-}
-video {
-  display: block;
-  width: 50%;
-  border-radius: 12px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
-}
-/* video section end here */
-
-/* card 5 section start here  */
-.card5 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
-  justify-items: center;
-  gap: 20px;
-  align-items: stretch;
-  /* padding: 34px; */
-  overflow: hidden;
-  padding-bottom: 20px;
-  padding-left: 50px;
-  padding-right: 50px;  /* card 5 section's other css are in card1 css  */
-}
-/* card 5 section end here  */
-
 /* =======Main section end here========= */
 
 
@@ -944,23 +792,7 @@ footer {
   }
       /* header section end here ==========*/
 
-      /* banner section start here  */
-  /* .shopNowBanner {
-  display: block;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-main {
-  position: relative;
-  z-index: 2;
-  background-color: var(--body-color);
-} */
-      /* banner section start here  */
-
-  .columnAbout,
-  .columnHomeLinen {
+  .columnAbout {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     justify-content: center;
@@ -991,28 +823,6 @@ main {
     justify-content: center;
   }
     /* footer section media query end here ==== */
-
-    /* video & screenshot section start here  */
-      .video-screenshot {
-        display: flex;
-        flex-direction: column;
-        /* width: 100%; */
-      }
-      .video-screenshot>img {
-        width: 100%;
-        padding: 30px;
-      }
-
-      .video-section {
-        display: grid;
-        grid-template-columns: 1fr;
-        margin: 30px 20px;
-        /* flex-wrap: wrap; */
-
-      }
-      video {
-        width: 100%;
-      }
     }
 /* Media Query end here */
 
