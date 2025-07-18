@@ -419,6 +419,7 @@
   z-index: 1;
   padding: 12%;
   background-size: cover;
+  background-position: center;
 }
 main {
   position: relative;
