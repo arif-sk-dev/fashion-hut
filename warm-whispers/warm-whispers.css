@@ -65,7 +65,8 @@
     .container {
       display: flex;
       justify-content: space-around;
-      align-items: center;      
+      align-items: center;
+      padding-left: .8rem;     
     }
 
       /* =====header=====  */
@@ -82,13 +83,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* padding-left: 20px; */
     }
         /* ========NAV==== */
     
     .icon {
       display: flex;
-      /* flex-direction: column; */
     }
 
     .icons>i{
@@ -100,10 +99,7 @@
     
     .navList {
       display: flex;
-      /* flex-direction: row; */
-      /* justify-content: space-between; */
       align-items: center;
-      /* cursor: pointer; */
     }
     
     .navList.active {
@@ -112,7 +108,6 @@
     
     .nav__link {
       color: var(--title-color);
-      /* font-weight: var(--font-semi-bold); */
       padding: 1rem 1rem;
       transition: background-color .3s;
       cursor: pointer;
@@ -125,7 +120,6 @@
     }
     
     .menu-toggle {
-      /* display: none; */
       font-size: 1.5rem;
       color: var(--title-color);
       cursor: pointer;
@@ -140,14 +134,10 @@
       font-weight: var(--font-semi-bold);
       padding: 1rem 1rem;
       transition: background-color .3s;
-      /* cursor: pointer; */
       position: absolute;
-    
-      /* flex-direction: column; */
       top: 63px;
       left: 0;
       right: 0;
-      /* background-color: blue; */
       background-color: var(--body-color);
       height: auto;
     }
@@ -163,9 +153,7 @@
     } 
     .dropdown-menu li a:hover {
       color: black;
-      /* background-color: var(--first-color-lighten); */
     }
-    
     
         /* Dropdown 1 */
     .dropdown__item.open .dropdown-menu {
@@ -176,30 +164,6 @@
       transition: transform 0.3s ease;
     }
     .dropdown__item.open .arrow { 
-      transform: rotate(180deg);   /*Rotates ▼ to become ▲ */
-    }
-    
-        /* Dropdown 2 */
-    .dropdown__item2.open .dropdown-menu2 {
-      display: block;
-    }
-      /* For rotate arrow sign */
-    .arrow {
-      transition: transform 0.3s ease;
-    }
-    .dropdown__item2.open .arrow { 
-      transform: rotate(180deg);   /*Rotates ▼ to become ▲ */
-    }
-    
-        /* Dropdown 3 */
-    .dropdown__item3.open .dropdown-menu3 {
-      display: block;
-    }
-      /* For rotate arrow sign */
-    .arrow {
-      transition: transform 0.3s ease;
-    }
-    .dropdown__item3.open .arrow { 
       transform: rotate(180deg);   /*Rotates ▼ to become ▲ */
     }
      
@@ -315,7 +279,6 @@
       margin-top: 30px;
     }
     .searchPage {
-      /* margin-top: 0; */
       top: 0;
       height: 0;
       width: 100%;
@@ -324,7 +287,6 @@
       transition: 0.5s;
       position: fixed;
       background-color: white;
-      /* height: 100vh; */
     }
     .searchPage p {
       font-size: 22px;
@@ -347,7 +309,6 @@
 
     /* Search page start heare */
     .searchBox {
-      /* margin-top: 50px; */
       display: flex;
       justify-content: center;
       margin-top: 40px;
@@ -448,14 +409,16 @@
       text-align: center;
     }
 
-
 /*======Main section start here ========= */
-.shopNowBanner {
+.hero {
+  background-image: url(../public/warm-whispers/banner.jpg);
   display: block;
   width: 100%;
   position: sticky;
   top: 0;
   z-index: 1;
+  padding: 12%;
+  background-size: cover;
 }
 main {
   position: relative;
@@ -485,7 +448,6 @@ main {
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  /* transition: 0.3s ease-in-out; */
 }
 .card-inner img {
   height: 220px;
@@ -494,7 +456,6 @@ main {
 }
 .flipCard:hover .card-inner {
   transform: rotateY(180deg);
-  /* transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out; */
 }
 
 .card-front,
@@ -519,14 +480,12 @@ footer {
   color: gray;
   padding: 20px;
   width: 100vw;
-  /* text-align: center; */
   font-size: 12px;
 }
 .footer1 {
   margin: 50px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* text-align: left; */
 }
 .footer1>div {
   display: flex;
@@ -572,7 +531,6 @@ footer {
   position: fixed;
   top: 0;
   right: -100%;
-  /* right: 0; */
   bottom: 0;
   width: 320px;
   padding: 20px;
@@ -587,9 +545,7 @@ footer {
 }
 
 .cart .cart-title {
-  /* padding-top: 10px; */
   margin-top: 0;
-  /* font-weight: 600; */
 }
 
 .des .price {
@@ -704,7 +660,6 @@ footer {
   position: relative;
   top: -10px;
   right: 10px;
-  /* background-color: #92705c; */
   background-color: rgb(146, 0, 208);
   color: white;
   padding: 4px 8px;

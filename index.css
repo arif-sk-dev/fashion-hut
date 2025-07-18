@@ -33,15 +33,12 @@
       box-sizing: border-box;
       padding: 0;
       margin: 0;
-      /* border: 1px solid red; */
     }
     body {
       font-family: var(--body-font);
       font-size: small;
-      /* font-size: var(--normal-font-size); */
       background-color: var(--body-color);
       color: var(--text-color);
-      /* box-sizing: border-box; */
     }
 
     .header1 {
@@ -66,7 +63,8 @@
     .container {
       display: flex;
       justify-content: space-around;
-      align-items: center;      
+      align-items: center;
+      padding-left: .8rem;
     }
       /* =====header=====  */
       .header2 {
@@ -100,7 +98,6 @@
     .navList {
       display: flex;
       align-items: center;
-      /* cursor: pointer; */
     }
     
     .navList.active {
@@ -109,7 +106,6 @@
     
     .nav__link {
       color: var(--title-color);
-      /* font-weight: var(--font-semi-bold); */
       padding: 1rem 1rem;
       transition: background-color .3s;
       cursor: pointer;
@@ -122,7 +118,6 @@
     }
     
     .menu-toggle {
-      /* display: none; */
       font-size: 1.5rem;
       color: var(--title-color);
       cursor: pointer;
@@ -156,7 +151,6 @@
     } 
     .dropdown-menu li a:hover {
       color: black;
-      /* background-color: var(--first-color-lighten); */
     }
 
         /* Dropdown 1 */
@@ -282,7 +276,6 @@
       margin-top: 30px;
     }
     .searchPage {
-      /* margin-top: 0; */
       top: 0;
       height: 0;
       width: 100%;
@@ -291,7 +284,6 @@
       transition: 0.5s;
       position: fixed;
       background-color: white;
-      /* height: 100vh; */
     }
     .searchPage p {
       font-size: 22px;
@@ -314,7 +306,6 @@
 
     /* Search page start heare */
     .searchBox {
-      /* margin-top: 50px; */
       display: flex;
       justify-content: center;
       margin-top: 40px;
@@ -426,7 +417,6 @@
   .slide {
     position: absolute;
     width: 100%;
-    /* height: 100%; */
     opacity: 0;
     transition: opacity 2s ease-in-out;
   }
@@ -434,7 +424,6 @@
   .slide img {
     display: block;
     width: 100%;
-    /* height: 100%; */
     object-fit: cover;
   }
 
@@ -451,20 +440,15 @@
     text-shadow: 0 3px 3px 8px black;
   }
   #shopbtn {
-    /* position: absolute; */
-    /* bottom: 100px; */
     padding: 9px;
-    /* cursor: pointer; */
     outline: none;
     border: 0.2px sold lightgray;
-
     position: absolute;
     bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     color: white;
     background: rgba(0, 0, 0, 0.6);
-    /* padding: 10px 20px; */
     font-size: 18px;
     border-radius: 5px;
   }
@@ -511,7 +495,6 @@
   gap: 30px;
   align-items: stretch;
   margin: 34px;
-  /* overflow: hidden; */
   padding-top: 10px;
 }
 .mainCard1 img {
@@ -547,11 +530,9 @@
 .mainCard3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  /* justify-content: center; */
   justify-items: center;
   gap: 30px;
   align-items: stretch;
-  /* padding: 34px; */
   overflow: hidden;
   padding-bottom: 20px;
   padding-left: 50px;
@@ -562,8 +543,6 @@
   height: 230px;
   cursor: pointer;
   margin-bottom: 40px;
-  /* padding-top: 30px; */
-  /* padding-bottom: 30px; */
 }
 .add-cart {
   position: absolute;
@@ -576,7 +555,6 @@
   position: relative;
   transform-style: preserve-3d;
   /* transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out; */
-  /* padding-bottom: 30px; */
 }
 .card-inner img {
   height: 220px;
@@ -600,12 +578,10 @@
   transform: rotateY(180deg);
 }
 
-
 /* handmade-embroideries section start here  */
 .handmade-embroideries {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
   justify-items: center;
   gap: 20px;
   align-items: stretch;
@@ -615,7 +591,6 @@
   padding-top: 20px;
   overflow: hidden;
 }
-
 
 .handmadeCard img {
   height: 220px;
@@ -634,14 +609,12 @@ footer {
   background-color: #333;
   color: gray;
   padding: 20px;
-  /* text-align: center; */
   font-size: 12px;
 }
 .footer1 {
   margin: 50px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* text-align: left; */
 }
 .footer1>div {
   display: flex;
@@ -690,11 +663,9 @@ footer {
   position: fixed;
   top: 0;
   right: -100%;
-  /* right: 0; */
   bottom: 0;
   width: 320px;
   padding: 20px;
-  /* background-color: beige; */
   background-color: white;
   box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
   z-index: 1001;
@@ -707,9 +678,7 @@ footer {
 }
 
 .cart .cart-title {
-  /* padding-top: 10px; */
   margin-top: 0;
-  /* font-weight: 600; */
 }
 
 .des .price {
@@ -738,7 +707,6 @@ footer {
 .cart-box img {
   width: 80px;
   height:80px;
-  /* object-fit: contain; */
 }
 
 .detail-box {
@@ -754,7 +722,6 @@ footer {
 .cart-product-title {
   font-weight: 600px;
   text-transform: uppercase;
-
 }
 
 .cart-price {
@@ -790,7 +757,6 @@ footer {
 .total-title {
   font-weight: 600;
 }
-
 
 .btn-buy {
   display: flex;
@@ -829,7 +795,6 @@ footer {
   position: relative;
   top: -10px;
   right: 10px;
-  /* background-color: #92705c; */
   background-color: rgb(146, 0, 208);
   color: white;
   padding: 4px 8px;
@@ -948,9 +913,7 @@ footer {
   }
 
   .searchBox input {
-    /* width: 100%; */
     padding: 15px 100px 15px 7px;
-
   }
 
     /* footer section media query start here ========= */

@@ -65,7 +65,8 @@
     .container {
       display: flex;
       justify-content: space-around;
-      align-items: center;      
+      align-items: center;
+      padding-left: .8rem;     
     }
 
       /* =====header=====  */
@@ -82,13 +83,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      /* padding-left: 20px; */
     }
         /* ========NAV==== */
     
     .icon {
       display: flex;
-      /* flex-direction: column; */
     }
 
     .icons>i{
@@ -100,8 +99,6 @@
     
     .navList {
       display: flex;
-      /* flex-direction: row; */
-      /* justify-content: space-between; */
       align-items: center;
       /* cursor: pointer; */
     }
@@ -112,7 +109,6 @@
     
     .nav__link {
       color: var(--title-color);
-      /* font-weight: var(--font-semi-bold); */
       padding: 1rem 1rem;
       transition: background-color .3s;
       cursor: pointer;
@@ -125,7 +121,6 @@
     }
     
     .menu-toggle {
-      /* display: none; */
       font-size: 1.5rem;
       color: var(--title-color);
       cursor: pointer;
@@ -140,14 +135,10 @@
       font-weight: var(--font-semi-bold);
       padding: 1rem 1rem;
       transition: background-color .3s;
-      /* cursor: pointer; */
       position: absolute;
-    
-      /* flex-direction: column; */
       top: 63px;
       left: 0;
       right: 0;
-      /* background-color: blue; */
       background-color: var(--body-color);
       height: auto;
     }
@@ -163,10 +154,8 @@
     } 
     .dropdown-menu li a:hover {
       color: black;
-      /* background-color: var(--first-color-lighten); */
     }
-    
-    
+        
         /* Dropdown 1 */
     .dropdown__item.open .dropdown-menu {
       display: block;
@@ -176,30 +165,6 @@
       transition: transform 0.3s ease;
     }
     .dropdown__item.open .arrow { 
-      transform: rotate(180deg);   /*Rotates ▼ to become ▲ */
-    }
-    
-        /* Dropdown 2 */
-    .dropdown__item2.open .dropdown-menu2 {
-      display: block;
-    }
-      /* For rotate arrow sign */
-    .arrow {
-      transition: transform 0.3s ease;
-    }
-    .dropdown__item2.open .arrow { 
-      transform: rotate(180deg);   /*Rotates ▼ to become ▲ */
-    }
-    
-        /* Dropdown 3 */
-    .dropdown__item3.open .dropdown-menu3 {
-      display: block;
-    }
-      /* For rotate arrow sign */
-    .arrow {
-      transition: transform 0.3s ease;
-    }
-    .dropdown__item3.open .arrow { 
       transform: rotate(180deg);   /*Rotates ▼ to become ▲ */
     }
      
@@ -308,14 +273,12 @@
     }
     .column a:hover {
       text-decoration: underline;
-    }
-    
+    }    
     
     #searchHeader {
       margin-top: 30px;
     }
     .searchPage {
-      /* margin-top: 0; */
       top: 0;
       height: 0;
       width: 100%;
@@ -324,7 +287,6 @@
       transition: 0.5s;
       position: fixed;
       background-color: white;
-      /* height: 100vh; */
     }
     .searchPage p {
       font-size: 22px;
@@ -347,7 +309,6 @@
 
     /* Search page start heare */
     .searchBox {
-      /* margin-top: 50px; */
       display: flex;
       justify-content: center;
       margin-top: 40px;
@@ -452,7 +413,7 @@
 /*======Main section start here ========= */
 .shopNowBanner {
   display: block;
-  width: 100%;
+  max-width: 100%;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -466,11 +427,9 @@ main {
 .card1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
   justify-items: center;
   gap: 20px;
   align-items: stretch;
-  /* padding: 34px; */
   overflow: hidden;
   padding-bottom: 20px;
   padding-left: 50px;
@@ -481,8 +440,6 @@ main {
   height: 230px;
   cursor: pointer;
   margin-bottom: 40px;
-  /* padding-top: 30px; */
-  /* padding-bottom: 30px; */
 }
 .card-inner {
   width: 100%;
@@ -519,11 +476,9 @@ main {
 .card2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  /* justify-content: center; */
   justify-items: center;
   gap: 20px;
   align-items: stretch;
-  /* padding: 34px; */
   overflow: hidden;
   padding-bottom: 20px;
   padding-left: 50px;
@@ -535,8 +490,6 @@ main {
   height: 260px;
   cursor: pointer;
   margin-bottom: 40px;
-  /* padding-top: 30px; */
-  /* padding-bottom: 30px; */
 }
 
 .card-inner2 {
@@ -576,7 +529,6 @@ main {
 .handmade-embroideries {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
   justify-items: center;
   gap: 30px;
   align-items: stretch;
@@ -619,11 +571,9 @@ main {
 .card4 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
   justify-items: center;
   gap: 20px;
   align-items: stretch;
-  /* padding: 34px; */
   overflow: hidden;
   padding-bottom: 20px;
   padding-left: 50px;
@@ -648,11 +598,9 @@ video {
 .card5 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  /* justify-content: center; */
   justify-items: center;
   gap: 20px;
   align-items: stretch;
-  /* padding: 34px; */
   overflow: hidden;
   padding-bottom: 20px;
   padding-left: 50px;
@@ -671,14 +619,12 @@ footer {
   color: gray;
   padding: 20px;
   width: 100vw;
-  /* text-align: center; */
   font-size: 12px;
 }
 .footer1 {
   margin: 50px;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  /* text-align: left; */
 }
 .footer1>div {
   display: flex;
@@ -705,7 +651,6 @@ footer {
   color: beige;
 }
 
-
 /* cart section start here  */
 .overlay {
   position: fixed;
@@ -724,7 +669,6 @@ footer {
   position: fixed;
   top: 0;
   right: -100%;
-  /* right: 0; */
   bottom: 0;
   width: 320px;
   padding: 20px;
@@ -739,9 +683,7 @@ footer {
 }
 
 .cart .cart-title {
-  /* padding-top: 10px; */
   margin-top: 0;
-  /* font-weight: 600; */
 }
 
 .des .price {
@@ -785,7 +727,6 @@ footer {
 .cart-product-title {
   font-weight: 600px;
   text-transform: uppercase;
-
 }
 
 .cart-price {
@@ -822,7 +763,6 @@ footer {
   font-weight: 600;
 }
 
-
 .btn-buy {
   display: flex;
   margin: 1.5rem auto 0 auto;
@@ -856,7 +796,6 @@ footer {
   position: relative;
   top: -10px;
   right: 10px;
-  /* background-color: #92705c; */
   background-color: rgb(146, 0, 208);
   color: white;
   padding: 4px 8px;
@@ -944,21 +883,6 @@ footer {
   }
       /* header section end here ==========*/
 
-      /* banner section start here  */
-  /* .shopNowBanner {
-  display: block;
-  width: 100%;
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-main {
-  position: relative;
-  z-index: 2;
-  background-color: var(--body-color);
-} */
-      /* banner section start here  */
-
   .columnAbout,
   .columnHomeLinen {
     display: grid;
@@ -968,7 +892,6 @@ main {
   }
 
   .searchBox input {
-    /* width: 100%; */
     padding: 15px 100px 15px 7px;
   }
 
@@ -996,7 +919,6 @@ main {
       .video-screenshot {
         display: flex;
         flex-direction: column;
-        /* width: 100%; */
       }
       .video-screenshot>img {
         width: 100%;
@@ -1007,7 +929,6 @@ main {
         display: grid;
         grid-template-columns: 1fr;
         margin: 30px 20px;
-        /* flex-wrap: wrap; */
 
       }
       video {
