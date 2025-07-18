@@ -407,7 +407,7 @@
 
 /*======Main section start here ========= */
 .hero {
-  background-image: url(../public/shop-banner.png);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(../public/shop-banner.png);
   display: block;
   width: 100%;
   position: sticky;

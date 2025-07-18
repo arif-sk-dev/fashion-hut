@@ -411,12 +411,15 @@
 
 
 /*======Main section start here ========= */
-.shopNowBanner {
+.hero {
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0)), url(../public/tuttti-frutti-banner.png);
   display: block;
-  max-width: 100%;
+  width: 100%;
   position: sticky;
   top: 0;
   z-index: 1;
+  padding: 12%;
+  background-size: cover;
 }
 main {
   position: relative;

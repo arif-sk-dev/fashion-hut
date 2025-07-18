@@ -411,7 +411,7 @@
 
 /*======Main section start here ========= */
 .hero {
-  background-image: url(../public/embroideries/banner.jpg);
+  background-image: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../public/embroideries/banner.jpg);
   display: block;
   width: 100%;
   position: sticky;
