@@ -1,4 +1,3 @@
-
 document.getElementById("menu-toggle").addEventListener('click', () => {
   const navList = document.getElementById("navList");
   const menuIcon = document.getElementById("menu-icon");
@@ -18,7 +17,6 @@ document.querySelectorAll('.navList a').forEach(link => {
     menuIcon.textContent = '☰';
   });
 });
- 
 
     //Dropdown 1=======================::
 document.querySelectorAll('.dropdown__button').forEach(button => {
@@ -50,6 +48,7 @@ document.addEventListener('click', (e) => {
 document.querySelector(".dropdown-menu").addEventListener("mouseleave", () => {
     document.body.style.overflow = "auto"; // Restore scrolling
 });
+// Dropdown end here 
 
 // Search page start here 
 function toggleSearch(open = true) {
@@ -264,6 +263,5 @@ function updatetotal() {
     document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
 // Cart section end here ============
-
 
 
