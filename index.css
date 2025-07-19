@@ -410,7 +410,7 @@
   .slideshow-container {
     position: relative;
     width: 100%;
-    height: 72vh;
+    height: 55vh;
     overflow: hidden;
   }
 
@@ -423,37 +423,22 @@
 
   .slide img {
     display: block;
-    width: 100%;
+    max-width: 100%;
     object-fit: cover;
+    background-position: center;
   }
 
-  .caption {
+  .slide-link {
     text-align: center;
+    justify-self: center;
     position: absolute;
-    bottom: 60px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 30%;
+    padding: 2px 10px;
     color: white;
-    font-size: 35px;
-  }
-  .caption p {
-    text-shadow: 0 3px 3px 8px black;
-  }
-  #shopbtn {
-    padding: 9px;
-    outline: none;
-    border: 0.2px sold lightgray;
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    background: rgba(0, 0, 0, 0.6);
+    border: .0011px solid #333;
+    background: rgba(0, 0, 0, 0.3);
     font-size: 18px;
     border-radius: 5px;
-  }
-  #shopbtn:hover {
-    background-color: rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
 
@@ -494,7 +479,7 @@
   justify-items: center;
   gap: 30px;
   align-items: stretch;
-  margin: 34px;
+  margin: 3rem 8rem;
   padding-top: 10px;
 }
 .mainCard1 img {
@@ -884,26 +869,16 @@ footer {
 
       /* slide Show start here ====== */
   .slideshow-container {
-    height: 30vh;
+    height: 16vh;
   }
-
-  .caption {
-    font-size: 18px;
+  .slide-link {
+    bottom: 25%;
+    padding: 1px 10px;
   }
-
-  .caption p {
-    text-shadow: 3px 5px 8px black;
-  }
-
-  #shopbtn {
-    position: relative;
-    bottom: 75px;
-    left: 50%;
-    transform: translateX(-50%);
-    }
-
     /* slide Show end here ====== */
-
+  .mainCard1 {
+    margin: 1rem 3rem;
+  }
   .columnAbout,
   .columnHomeLinen {
     display: grid;
