@@ -18,6 +18,8 @@ document.querySelectorAll('.navList a').forEach(link => {
   });
 });
 
+
+
     //Dropdown 1=======================::
 document.querySelectorAll('.dropdown__button').forEach(button => {
   button.addEventListener('click', (e) => {
@@ -40,15 +42,16 @@ document.addEventListener('click', (e) => {
 });
 
     // Disable scrolling when the dropdown is active.
-    // Re-enable scrolling when the dropdown is closed.
     document.querySelector(".dropdown-menu").addEventListener("mouseenter", () => {
-    document.body.style.overflow = "hidden"; // Prevent scrolling
-});
-
+      document.body.style.overflow = "hidden"; // Prevent scrolling
+    });
+    
+    // Re-enable scrolling when the dropdown is closed.
 document.querySelector(".dropdown-menu").addEventListener("mouseleave", () => {
     document.body.style.overflow = "auto"; // Restore scrolling
 });
 // Dropdown end here 
+
 
 // Search page start here 
 function toggleSearch(open = true) {
@@ -137,7 +140,6 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 });  //end -----
-
 
 // cart working
   if(document.readyState == "loading") {
@@ -263,3 +265,25 @@ function updatetotal() {
     document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
 // Cart section end here ============
+
+
+// Read More button start here 
+document.addEventListener('click', function (event) {
+  if(event.target.classList.contains('showMore')) {
+
+    event.preventDefault(); //Prevent Jumping
+    event.stopPropagation(); //Stop event bubbling
+
+    let extraText = event.target.parentElement.querySelector('.extraText');
+
+    if (extraText.style.display === "none") {
+      extraText.style.display = "inline";
+      event.target.innerText = "Read Less"; //Not use <.this> use <event.target>
+    } else {
+      extraText.style.display = "none";
+      event.target.innerText = "Read More"; //Not use <.this> use event.target 
+    }
+  }
+});
+// Read More button end here 
+

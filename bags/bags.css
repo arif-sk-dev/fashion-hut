@@ -14,7 +14,7 @@
       --font-medium: 500;
       --font-semi-bold: 600;
       --body-font: "Poppins", sans-serif;
-      --para-color: black; 
+      --para-color: black;
     }
     
     html {
@@ -33,6 +33,7 @@
       box-sizing: border-box;
       padding: 0;
       margin: 0;
+      /* border: 1px solid red; */
     }
     body {
       font-family: var(--body-font);
@@ -60,11 +61,11 @@
       text-decoration: none;
     }
     
-    .container {
+     .container {
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding-left: .8rem;
+      padding-left: .8rem;      
     }
       /* =====header=====  */
       .header2 {
@@ -82,12 +83,9 @@
       align-items: center;
     }
         /* ========NAV==== */
-
-    .icon {
+     .icon {
       display: flex;
-      /* flex-direction: column; */
     }
-
     .icons>i{
       padding: 10px;
       font-size: 22px;
@@ -118,6 +116,7 @@
     }
     
     .menu-toggle {
+      /* display: none; */
       font-size: 1.5rem;
       color: var(--title-color);
       cursor: pointer;
@@ -152,14 +151,15 @@
     .dropdown-menu li a:hover {
       color: black;
     }
-
+    
+    
         /* Dropdown 1 */
     .dropdown__item.open .dropdown-menu {
       display: block;
     }
       /* For rotate arrow sign */
     .arrow {
-      transition: transform 0.5s ease;
+      transition: transform 0.3s ease;
     }
     .dropdown__item.open .arrow { 
       transform: rotate(180deg);   /*Rotates ▼ to become ▲ */
@@ -271,11 +271,12 @@
     .column a:hover {
       text-decoration: underline;
     }
-        
+    
     #searchHeader {
       margin-top: 30px;
     }
     .searchPage {
+      /* margin-top: 0; */
       top: 0;
       height: 0;
       width: 100%;
@@ -284,6 +285,7 @@
       transition: 0.5s;
       position: fixed;
       background-color: white;
+      /* height: 100vh; */
     }
     .searchPage p {
       font-size: 22px;
@@ -306,6 +308,7 @@
 
     /* Search page start heare */
     .searchBox {
+      /* margin-top: 50px; */
       display: flex;
       justify-content: center;
       margin-top: 40px;
@@ -338,7 +341,7 @@
       bottom: 30px;
       color: darkolivegreen;
     }
-      /* header section end here  */
+          /* header section end here  */
 
 /* user login start =========== */
     #loginUser {
@@ -390,8 +393,8 @@
     #closeBtn:hover {
       color: red;
     }
-          /* ================== header2 section end here ================= */
-    /* user login end ============== */
+    
+/* user login end ============== */
     
       /* ==============Header3 section==========  */
     .header3 {
@@ -405,120 +408,31 @@
       font-size: 12px;
       text-align: center;
     }
-         /*=======Slide Show/ Banner section start here ========== */
- 
-  .slideshow-container {
-    position: relative;
-    width: 100%;
-    height: 55vh;
-    overflow: hidden;
-  }
-
-  .slide {
-    position: absolute;
-    width: 100%;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-    cursor: pointer;
-  }
-
-  .slide img {
-    display: block;
-    max-width: 100%;
-    object-fit: cover;
-    background-position: center;
-  }
-
-  /* .slide-link {
-    text-align: center;
-    justify-self: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 30%;
-    padding: 2px 10px;
-    color: white;
-    border: .0011px solid #333;
-    background: rgba(0, 0, 0, 0.3);
-    font-size: 18px;
-    border-radius: 5px;
-    cursor: pointer;
-  } */
-
-/* Active Slide */
-  .active {
-    opacity: 1;
-  }
-
-/* Dot Indicators */
-  .dots-container {
-    text-align: center;
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-  }
-
-  .dot {
-    height: 12px;
-    width: 12px;
-    margin: 0 5px;
-    background-color: gray;
-    display: inline-block;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.5s;
-  }
-
-  .dot.active {
-    background-color: white;
-  }
-/* =======Slide Show/Banner section end here========= */
 
 /* main section start here  */
-.mainCard1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  justify-content: center;
-  justify-items: center;
-  gap: 30px;
-  align-items: stretch;
-  margin: 3rem 8rem;
-  padding-top: 10px;
-}
-.mainCard1 img {
+.hero {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7)), url(../public/bags/bags-banner.jpg);
   display: block;
   width: 100%;
-  border-radius: 5px;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding: 12%;
+  background-size: cover;
+  background-position: center;
+  text-align: right;
+}
+main {
   position: relative;
-  transition: transform 0.3s ease-in-out;
-}
-.mainCard1 img:hover {
-  transform: scale(1.05);
-}
-.imgCard1 {
-  position: relative;
-  text-align: center;
-  overflow: hidden;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.imgCard1 .text {
-  position: absolute;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-shadow:  4px 4px 5px 8px black;
-  color: white;
-  font-size: 18px;
-  background: rgba(0, 0, 0, 0.3);
+  z-index: 2;
+  background-color: var(--body-color);
 }
 
-/* main card 2 section start here  */
-.mainCard2,
-.mainCard3 {
+.card1 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
   justify-items: center;
-  gap: 30px;
+  gap: 20px;
   align-items: stretch;
   overflow: hidden;
   padding-bottom: 20px;
@@ -531,17 +445,11 @@
   cursor: pointer;
   margin-bottom: 40px;
 }
-.add-cart {
-  position: absolute;
-  right: 10px;
-  bottom: 5px;
-}
 .card-inner {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
-  /* transition: transform 0.6s ease-in-out, opacity 0.4s ease-in-out; */
 }
 .card-inner img {
   height: 220px;
@@ -550,7 +458,6 @@
 }
 .flipCard:hover .card-inner {
   transform: rotateY(180deg);
-  /* transition: transform 0.5s ease-in-out, opacity 0.4s ease-in-out; */
 }
 
 .card-front,
@@ -564,61 +471,16 @@
 .card-back {
   transform: rotateY(180deg);
 }
-
-
-/* pagination start here  */
-.pagination {
-  display: flex;
-  justify-content: right;
-  margin-right: 60px;
-  gap: 15px;
-  margin-top: 1rem;
-  margin-bottom: 4rem;
-}
-.active {
-  color: white;
-  background-color: green;
-}
-.prev, #pageButtons, .next {
-  cursor: pointer;
-}
-.prev:hover, .next:hover {
-  background-color: green;
-  color: white;
-}
-  /* pagination end here */
-
-/* handmade-embroideries section start here  */
-.handmade-embroideries {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  justify-items: center;
-  gap: 20px;
-  align-items: stretch;
-  padding-bottom: 50px;
-  padding-left: 50px;
-  padding-right: 50px;
-  padding-top: 20px;
-  overflow: hidden;
-}
-
-.handmadeCard img {
-  height: 220px;
-  width: 200px;
-  border-radius: 5px;
-  transition: transform 0.3s ease-in-out;
-}
-.handmadeCard img:hover {
-  transform: scale(1.05);
-}
-
 /* main section end here  */
 
 /* Footer Section ============== */
 footer {
+  position: relative;
+  z-index: 2;
   background-color: #333;
   color: gray;
   padding: 20px;
+  width: 100vw;
   font-size: 12px;
 }
 .footer1 {
@@ -650,10 +512,6 @@ footer {
 .footer2 a:hover {
   color: beige;
 }
-.footer-img {
-  display: block;
-  width: 100%;
-}
 
 /* cart section start here  */
 .overlay {
@@ -677,11 +535,9 @@ footer {
   width: 320px;
   padding: 20px;
   background-color: white;
-  color: #656e81;
   box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
   z-index: 1001;
   transition: 0.4s;
-  overflow-x: hidden;
   overflow-y: auto;
 }
 .cart.active {
@@ -716,8 +572,8 @@ footer {
   margin-top: 10px;
 }
 .cart-box img {
-  width: 80px;
-  height:80px;
+  width: 100%;
+  aspect-ratio: 1/1;
 }
 
 .detail-box {
@@ -728,7 +584,6 @@ footer {
 .product-title {
   font-size: 14px;
   font-weight: 500;
-
 }
 .cart-product-title {
   font-weight: 600px;
@@ -798,10 +653,6 @@ footer {
   color: red;
 }
 
-.des i {
-  cursor: pointer;
-}
-
 .cart-count {
   position: relative;
   top: -10px;
@@ -814,8 +665,8 @@ footer {
 }
 /* cart section end here  */
 
-/* ================= Media Query start here ================ */
-@media (300px <= width <=768px) {
+/* Media Query start here  */
+@media (350px <= width <=768px) {
   .header1 {
     display: none;
   }
@@ -893,18 +744,6 @@ footer {
   }
       /* header section end here ==========*/
 
-      /* slide Show start here ====== */
-  .slideshow-container {
-    height: 16dvh;
-  }
-  /* .slide-link {
-    bottom: 25%;
-    padding: 1px 10px;
-  } */
-    /* slide Show end here ====== */
-  .mainCard1 {
-    margin: 1rem 3rem;
-  }
   .columnAbout,
   .columnHomeLinen {
     display: grid;
@@ -914,8 +753,13 @@ footer {
   }
 
   .searchBox input {
+    /* width: 100%; */
     padding: 15px 100px 15px 7px;
   }
+
+  /*======Main section start here ========= */
+
+    /* Main section end here  */
 
     /* footer section media query start here ========= */
   .footer1 {
@@ -937,5 +781,4 @@ footer {
   }
     /* footer section media query end here ==== */
   }
-
 /* Media Query end here */
