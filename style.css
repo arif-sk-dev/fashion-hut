@@ -791,7 +791,7 @@ footer {
 /* cart section end here  */
 
 /* ================= Media Query start here ================ */
-@media (350px <= width <=768px) {
+@media (300px <= width <=768px) {
   .header1 {
     display: none;
   }
@@ -871,7 +871,7 @@ footer {
 
       /* slide Show start here ====== */
   .slideshow-container {
-    height: 16vh;
+    height: 16dvh;
   }
   /* .slide-link {
     bottom: 25%;
