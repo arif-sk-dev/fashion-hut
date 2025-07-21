@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Fashion Hut/Shipping & Charge</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    :root {
+      --header-height: 3.5rem;
+      --first-color: hsl(220, 68%, 54%);
+      --first-color-lighten: hsl(220, 68%, 97%);
+      --title-color: hsl(220, 48%, 28%);
+      --text-color: hsl(220, 12%, 45%);
+      --body-color: hsl(220, 100%, 99%);
+      --normal-font-size: .938rem;
+      --small-font-size: .813rem;
+      --smaller-font-size: .75rem;
+      --font-medium: 500;
+      --font-semi-bold: 600;
+      --body-font: "Poppins", sans-serif;
+      --para-color: black;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: "Poppins";
+      background-color: #f8f8f8;
+      color: #656e81;
+    }
+
+    .header {
+      /* background-color: #1f2937; */
+      background-color: #0066cc;
+      color: white;
+      padding: 1.2rem;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: clamp(1rem, calc(2.3vw + 1rem), 3.5rem);
+    }
+   
+  .back-btn {
+    margin-top: 20px;
+    margin-left: 80px;
+    padding: 7px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .back-btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  .ri-arrow-left-long-fill {
+    font-size: 15px;
+    padding-right: 8px;
+  }
+  .home {
+    margin-left: 0;
+  }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      border-radius: 8px;
+    }
+
+    .section h2 {
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      line-height: 1.6;
+      margin-bottom: 20px;
+    }
+
+    .section ul {
+      padding-left: 20px;
+    }
+
+    .section li {
+      margin-bottom: 10px;
+    }
+
+    /* Footer Section ============== */
+footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer2 {
+  text-align: center;
+}
+.footer2 a:hover {
+  color: beige;
+}
+
+/* Media Query start here  */
+@media (350px <= width <=768px) {
+  .back-btn {
+    margin-left: 10vw;
+  }
+  .section {
+    margin: 1rem;
+  }
+}
+  </style>
+
+</head>
+<body>
+
+  <div class="header">
+    <h1>Shipping & Charge</h1>
+  </div><br>
+
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
+  <button class="back-btn home" onclick="window.location.href='../index.html'"><i class="ri-home-8-line"></i></button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <div class="section">
+    <h2>📦 Shipping Information</h2>
+    <p>We offer flexible shipping methods to ensure your products arrive safely and on time:</p>
+    <ul>
+      <li>🕒 <strong>Standard Shipping:</strong> 5–7 business days</li>
+      <li>⚡ <strong>Express Shipping:</strong> 2–3 business days</li>
+      <li>🚀 <strong>Overnight Shipping:</strong> Next business day delivery</li>
+    </ul>
+
+    <h2>💰 Shipping Charges</h2>
+    <p>Charges are calculated based on destination and weight. Here's a breakdown:</p>
+    <ul>
+      <li>Standard: $5.00</li>
+      <li>Express: $15.00</li>
+      <li>Overnight: $25.00</li>
+    </ul>
+
+    <p><em>Note:</em> Free standard shipping for orders over $100!</p>
+  </div>
+
+  <!-- Footer section start here=========== -->
+    <footer>
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
