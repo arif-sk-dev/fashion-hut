@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Customer Support</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    .header {
+      background: #007BFF;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    }
+
+    h2 {
+      color: #007BFF;
+      margin-bottom: 20px;
+    }
+
+    form label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+    }
+
+    button {
+      background: #007BFF;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #0056b3;
+    }
+
+    .faq {
+      margin-top: 40px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item h4 {
+      margin: 0;
+      cursor: pointer;
+      color: #444;
+    }
+
+    .faq-item p {
+      display: none;
+      margin: 10px 0 0;
+      color: #666;
+    }
+
+    .contact-info {
+      margin-top: 40px;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+    }
+
+    .message {
+      display: none;
+      margin-top: 15px;
+      color: green;
+    }
+
+    /* back button start here  */
+    .back-btn {
+      margin-top: 20px;
+      margin-bottom: 2rem;
+      margin-left: 10%;
+      padding: 7px 12px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .home {
+      margin-left: 0;
+    }
+    .back-btn:hover {
+      background-color: #0056b3;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+.ri-arrow-left-long-fill {
+  font-size: 15px;
+  padding-right: 8px;
+}
+    /* back button end here  */
+
+  /* Footer Section start here ============== */
+footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer2 {
+  text-align: center;
+}
+.footer2 a:hover {
+  color: beige;
+}
+
+@media (350px <= width <=768px) {
+  .container {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Customer Support</h1>
+    <p>We're here to help — reach out anytime!</p>
+  </div>
+
+  <div class="container">
+    <h2>Send Us a Message</h2>
+    <form id="supportForm">
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="query">Message:</label>
+      <textarea id="query" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+      <div class="message" id="formSuccess">✅ We've received your message. Thanks!</div>
+    </form>
+
+    <div class="faq">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h4 onclick="toggleFaq(this)">How long does support take to respond?</h4>
+        <p>Our team typically responds within 24 hours during business days.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4 onclick="toggleFaq(this)">Can I update or cancel my order?</h4>
+        <p>Yes, within 12 hours of placing the order. Contact our support team directly.</p>
+      </div>
+
+      <div class="faq-item">
+        <h4 onclick="toggleFaq(this)">Is there a return policy?</h4>
+        <p>Absolutely. We offer 30-day returns for eligible products. See our policy page for details.</p>
+      </div>
+    </div>
+
+    <div class="contact-info">
+      <h2>Other Ways to Reach Us</h2>
+      <p><strong>Email:</strong> support@example.com</p>
+      <p><strong>Phone:</strong> +880-123-456789</p>
+      <p><strong>Live Chat:</strong> Available weekdays 9AM–6PM (Bangladesh time)</p>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('supportForm');
+    const successMsg = document.getElementById('formSuccess');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      form.reset();
+      successMsg.style.display = 'block';
+    });
+
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+
+    <!-- Back & Home button start here  -->
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
+  <button class="back-btn home" onclick="window.location.href='/'"><i class="ri-home-8-line"></i></button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+    <!-- footer section start here  -->
+  <footer>
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
