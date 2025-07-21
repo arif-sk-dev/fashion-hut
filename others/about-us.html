@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- ==========Remixicon icon here======== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>about-us</title>
+    <!-- ==============css link here============== -->
+</head>
+
+<body>
+  <!-- delivery details section start here ========= -->
+  <div class="delivery-header">
+    <h1 style="font-weight: 400;">About Kitchen & Table Linens</h1>
+    <p>Crafting beautiful moments through textiles.</p>
+  </div>
+  <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
+  <button class="back-btn home" onclick="window.location.href='/'"><i class="ri-home-8-line"></i></button>
+  <script>
+    function goBack() {
+      window.history.back();
+    }
+  </script>
+
+  <div class="container">
+    <div class="image">
+      <img src="../public/About3.png" alt="">
+      <img src="../public/About2.png" alt="">
+      <img src="../public/About1.png" alt="">
+    </div><br><br>
+
+    <h2>✨ What we value?</h2><br>
+    <div class="grid">
+      <div class="card">
+        <h3>Our Story:</h3>
+        <p>Fashion Hut was founded with a simple mission: to bring charm, quality, and sustainability into every kitchen and dining room. From humble beginnings in a small artisan studio, we've grown into a brand that celebrates tradition, craftsmanship, and elegance.</p>
+      </div>
+      <div class="card">
+        <p> <strong>Sustainability:</strong> Eco-friendly, reusable materials that last.</p>
+      </div>
+      <div class="card">
+        <p> <strong>Craftsmanship:</strong> Every thread tells a story.</p>
+      </div>
+      <div class="card">
+        <p> <strong>Style:</strong> Stylish, seasonal collections that fit any home.</p>
+      </div>
+      <div class="card">
+        <p> <strong>Community:</strong> Supporting local artisans and ethical trade.</p>
+      </div>
+    </div><br>
+    <div>
+      <h2>✨ Meet The Team:</h2><br>
+      <p>Behind every product is a dedicated team of designers, weavers, and dreamers who are passionate about making your space more beautiful, one linen at a time.</p>
+    </div>
+  </div>
+ <!-- delivery details section end here ============ -->
+
+<!-- Footer section start here=========== -->
+    <footer>
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <style>
+          /* poppins font import link */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+    :root {
+      --header-height: 3.5rem;
+      --first-color: hsl(220, 68%, 54%);
+      --first-color-lighten: hsl(220, 68%, 97%);
+      --title-color: hsl(220, 48%, 28%);
+      --text-color: hsl(220, 12%, 45%);
+      --body-color: hsl(220, 100%, 99%);
+      --normal-font-size: .938rem;
+      --small-font-size: .813rem;
+      --smaller-font-size: .75rem;
+      --font-medium: 500;
+      --font-semi-bold: 600;
+      --body-font: "Poppins", sans-serif;
+      --para-color: black;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+    }
+    
+    @media (min-width: 1024px) {
+      :root {
+        --normal-font-size: 1rem;
+        --small-font-size: .874rem;
+        --smaller-font-size: .813rem;
+      }
+    }
+        /* =======BASE=======  */
+    * {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+      /* border: 1px solid red; */
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: var(--body-font);
+      font-size: small;
+      background-color: var(--body-color);
+      color: var(--text-color);
+    }
+
+ /* delivery details start here =========== */
+
+ .container {
+  padding: 3.5rem;
+  max-width: 100%;
+ }
+ .image {
+  display: flex;
+  max-width: 100%;
+  gap: 1.5%;
+ }
+ .image img {
+  max-width: 32.33%;
+  display: block;
+  border: 1px solid gray;
+  border-radius: 5px;
+ }
+.delivery-header {
+  padding: 1.5rem;
+  background-color: #0066cc;
+  color: white;
+  text-align: center;
+}
+
+.delivery-header h1 {
+      font-size: clamp(1.2rem, calc(3vw + .5rem), 3.5rem);
+    }
+.delivery-header p {
+      font-size: clamp(.2rem, calc(2vw + .17rem), 2.5rem);
+    }
+
+.back-btn {
+  margin-top: 20px;
+  margin-left: 70px;
+  padding: 7px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.home {
+  margin-left: 0;
+}
+.back-btn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.ri-arrow-left-long-fill {
+  font-size: 15px;
+  padding-right: 8px;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  max-width: 100%;
+  /* margin-left: 2rem; */
+}
+
+.card {
+  background: #f7f7f7;
+  padding: 1.2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+ /* delivery details end here =========== */
+
+/* Footer Section ============== */
+footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer2 {
+  text-align: center;
+}
+.footer2 a:hover {
+  color: beige;
+}
+
+/* Media Query start here  */
+@media (350px <= width <=768px) {
+  .container {
+    padding: 1.5rem;
+  }
+  .delivery-header {
+    width: 100%;
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+/* Media Query end here */
+    </style>
+
+  </body>
+</html>
