@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Become a Retailer</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #3f87a6, #00aeef);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    h2 {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: clamp(1.1rem, calc(1.5vw + .17rem), 1.5rem);
+    }
+    .intro {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      text-align: center;
+    }
+    .benefits {
+      background: white;
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .benefits ul {
+      list-style: none;
+      padding: 0;
+    }
+    .benefits ul li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .benefits ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #00aeef;
+    }
+    .form-section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    form {
+      display: grid;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.8rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      padding: 0.8rem;
+      border: none;
+      background: #00aeef;
+      color: white;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+ 
+      /* footer section start here  */
+    footer {
+      background-color: #333;
+      color: gray;
+      padding: 20px;
+      font-size: 12px;
+    }
+
+    .footer2 {
+      text-align: center;
+    }
+    .footer2 a:hover {
+      color: beige;
+    }
+
+    @media (300px <= width <=768px) {
+      .benefits {
+        margin: 1rem;
+      }
+      .form-section {
+        margin: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="text-shadow: 0 0 10px black;">Become a Retailer</h1>
+    <p style="text-shadow: 0 0 10px black;">Partner with us and grow your business</p>
+  </header>
+
+  <section class="intro">
+    <p>We’re always looking to expand our reach with passionate retailers. Join our network and benefit from high-quality products, excellent support, and increased profitability.</p>
+  </section>
+
+  <section class="benefits">
+    <h2>Benefits of Partnering with Us</h2>
+    <ul>
+      <li>Access to exclusive products</li>
+      <li>Dedicated support team</li>
+      <li>Fast shipping and fulfillment</li>
+      <li>Marketing assistance and assets</li>
+      <li>Flexible order volumes</li>
+    </ul>
+  </section>
+
+  <section class="form-section">
+    <h2>Apply Now</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Email Address" required />
+      <input type="text" placeholder="Business Name" />
+      <textarea rows="5" placeholder="Tell us about your store and goals..."></textarea>
+      <button type="submit">Submit Application</button>
+    </form>
+  </section>
+
+    <footer>
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
