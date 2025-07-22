@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Who We Are</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #f7f8fa, #e2e6ed);
+      color: #333;
+    }
+
+    header {
+      background-color: #4b6cb7;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    section {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1, h2 {
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-size: clamp(1.1rem, calc(1.5vw + 2rem), 2.2rem);
+    }
+
+    p {
+      line-height: 1.6;
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .member {
+      flex: 1 1 250px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .member img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 0.001px solid lightgray;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+
+    /* footer section start here  */
+    footer {
+  background-color: #333;
+  color: gray;
+  padding: 20px;
+  font-size: 12px;
+}
+
+.footer2 {
+  text-align: center;
+}
+.footer2 a:hover {
+  color: beige;
+}
+  </style>
+</head>
+<body>
+  <header>
+    <h1 style="text-shadow: 0 0 10px black;">Who We Are</h1>
+    <p style="text-shadow: 0 0 10px black;">Your Destination for Refined Fashion</p>
+  </header>
+
+  <section>
+    <h2>Our Mission</h2>
+    <p>
+      <ul>
+        <li>Simplify the shopping experience with intuitive design and seamless cart functionality.</li>
+        <li>Promote sustainability and conscious choices by spotlighting ethical brands and materials.</li>
+        <li>Curate modern styles that cater to diverse tastes—from casual comfort to bold statements.</li>
+        <li>Listen to our community to evolve, inspire, and grow alongside your fashion journey.</li>
+      </ul>
+    </p>
+
+    <h2>Our Team</h2>
+    <div class="team">
+      <div class="member">
+        <img src="../public/team1.png" alt="Team Member" />
+        <h3>Arif H.</h3>
+        <p>Research and anticipate fashion trends to create fresh, relevant collections.</p>
+      </div>
+      <div class="member">
+        <img src="../public/team2.png" alt="Team Member" />
+        <h3>Samira A.</h3>
+        <p>Craft inclusive and appealing designs that connect with a diverse audience.</p>
+      </div>
+      <div class="member">
+        <img src="../public/team3.png" alt="Team Member" />
+        <h3>Tanvir R.</h3>
+        <p>- Maintain a strong brand identity across products, visuals, and messaging.</p>
+      </div>
+    </div>
+  </section>
+
+
+    <footer>
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -36,6 +36,7 @@
     h2 {
       color: #007BFF;
       margin-bottom: 20px;
+      font-size: clamp(1.1rem, calc(1.5vw + .17rem), 1.5rem);
     }
 
     form label {
@@ -76,6 +77,9 @@
       margin: 0;
       cursor: pointer;
       color: #444;
+    }
+    .faq-item h4:hover {
+      color: green;
     }
 
     .faq-item p {
@@ -151,21 +155,21 @@ footer {
 <body>
 
   <div class="header">
-    <h1>Customer Support</h1>
-    <p>We're here to help — reach out anytime!</p>
+    <h1 style="text-shadow: 0 0 10px black">Customer Support</h1>
+    <p style="text-shadow: 0 0 10px black">We're here to help — reach out anytime!</p>
   </div>
 
   <div class="container">
     <h2>Send Us a Message</h2>
     <form id="supportForm">
       <label for="name">Full Name:</label>
-      <input type="text" id="name" required />
+      <input type="text" id="name" placeholder="Enter Your Name" required />
 
       <label for="email">Email:</label>
-      <input type="email" id="email" required />
+      <input type="email" id="email" placeholder="Enter Your Email" required />
 
       <label for="query">Message:</label>
-      <textarea id="query" rows="5" required></textarea>
+      <textarea id="query" rows="5" placeholder="Type your message here......" required></textarea>
 
       <button type="submit">Submit</button>
       <div class="message" id="formSuccess">✅ We've received your message. Thanks!</div>

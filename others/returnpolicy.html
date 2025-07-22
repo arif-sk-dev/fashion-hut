@@ -68,6 +68,7 @@
 
     h2 {
       margin-bottom: 0.5rem;
+      font-size: clamp(1.1rem, calc(1.5vw + .17rem), 1.5rem);
     }
 
     ul, ol {
@@ -108,13 +109,16 @@ footer {
       .back-btn {
         margin-left: 20px;
       }
+      .home {
+        margin-left: 0;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Return Policy</h1>
+    <h1 style="text-shadow: 0 0 10px black">Return Policy</h1>
   </header>
 
   <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
@@ -133,13 +137,13 @@ footer {
 
     <section>
       <h2>Return Conditions</h2>
-      <ul>
+      <ol>
         <li>Items must be unused, unwashed, and in original condition.</li>
         <li>Original packaging and tags must be intact.</li>
         <li>Proof of purchase (receipt or order confirmation) is required.</li>
         <li>Sale and clearance items are non-returnable.</li>
         <li>Shipping fees are non-refundable.</li>
-      </ul>
+      </0l>
     </section>
 
     <section>

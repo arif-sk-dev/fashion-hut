@@ -81,6 +81,7 @@
     .section h2 {
       font-size: 22px;
       margin-bottom: 15px;
+      font-size: clamp(1.1rem, calc(1.5vw + .17rem), 1.5rem);
     }
 
     .section p {
@@ -119,6 +120,9 @@ footer {
   .section {
     margin: 1rem;
   }
+  .home {
+    margin-left: 0;
+  }
 }
   </style>
 
@@ -126,7 +130,7 @@ footer {
 <body>
 
   <div class="header">
-    <h1>Shipping & Charge</h1>
+    <h1 style="text-shadow: 0 0 10px black">Shipping & Charge</h1>
   </div><br>
 
   <button class="back-btn" onclick="goBack()"><i class="ri-arrow-left-long-fill"></i>Back</button>
@@ -140,7 +144,7 @@ footer {
   <div class="section">
     <h2>📦 Shipping Information</h2>
     <p>We offer flexible shipping methods to ensure your products arrive safely and on time:</p>
-    <ul>
+    <ul style="list-style: none;">
       <li>🕒 <strong>Standard Shipping:</strong> 5–7 business days</li>
       <li>⚡ <strong>Express Shipping:</strong> 2–3 business days</li>
       <li>🚀 <strong>Overnight Shipping:</strong> Next business day delivery</li>

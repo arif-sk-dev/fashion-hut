@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Track My Order</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f5f6fa;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100dvh;
+      box-sizing: border-box;
+    }
+    .container {
+      /* display: grid; */
+      /* grid-template-columns: 1fr; */
+      background: white;
+      width: 900px;
+      margin: 30px;
+      /* width: 60%; */
+      /* width: 90%; */
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      justify-content: center;
+      align-items: center;
+    }
+    h2 {
+      text-align: center;
+      color: #333;
+      font-size: clamp(1.1rem, calc(1.5vw + .17rem), 1.5rem);
+    }
+    input {
+      width: 100%;
+      display: block;
+      padding: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 15px;
+      /* justify-content: center; */
+      /* margin-right: 10px; */
+    }
+    
+    button {
+      width: 100%;
+      background: #007BFF;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .status {
+      margin-top: 20px;
+      font-size: 15px;
+      color: #444;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>Track My Order</h2>
+    <input type="text" id="orderID" placeholder="Enter your Order ID" />
+    <button onclick="trackOrder()">Track Order</button>
+    <div class="status" id="orderStatus"></div> <br>
+    <p style="color: gray; font-size: 12px;">e.g: dummy order ID: 12345, 67890 or, 11111</p>
+  </div>
+
+  <script>
+    const dummyData = {
+      "12345": "Order is out for delivery 🚚",
+      "67890": "Order delivered ✅",
+      "11111": "Order processing 🔄"
+    };
+
+    function trackOrder() {
+      const orderID = document.getElementById("orderID").value.trim();
+      const statusDiv = document.getElementById("orderStatus");
+      if (dummyData[orderID]) {
+        statusDiv.textContent = dummyData[orderID];
+      } else {
+        statusDiv.textContent = "Sorry, we couldn’t find that order. Please check your ID.";
+      }
+    }
+  </script>
+  
+
+</body>
+</html>

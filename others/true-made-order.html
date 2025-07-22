@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Made to Order</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f6f6f6;
+    }
+    header {
+      background-color: #007bff;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      text-shadow: 0 0 10px black;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+    h2 {
+      margin-top: 0;
+      color: #333;
+    }
+    .product-image {
+      width: 100%;
+      height: auto;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input[type="text"],
+    select,
+    textarea {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 0.9rem;
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005ea2;
+    }
+    .confirmation {
+      margin-top: 1rem;
+      color: green;
+      font-weight: bold;
+    }
+
+    footer {
+      background-color: #333;
+      color: gray;
+      padding: 20px;
+      font-size: 12px;
+    }
+
+    .footer2 {
+      text-align: center;
+    }
+    .footer2 a:hover {
+      color: beige;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>True Made to Order</h1>
+  </header>
+
+  <div class="container">
+    <img src="https://via.placeholder.com/800x400?text=Your+Custom+Design" class="product-image" alt="Product preview" />
+    <h2>Customize Your Order</h2>
+    <form id="orderForm">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="text" name="email" placeholder="Your Email" required />
+      <select name="itemType" required>
+        <option value="">Select Item Type</option>
+        <option value="T-shirt">T-Shirt</option>
+        <option value="baby_clothing">Baby Clothing</option>
+        <option value="embroidery">Embroidery</option>
+        <option value="warm-whishpers">Warm Whishpers</option>
+        <option value="Tutti-Frutti">Tutti Frutti</option>
+        <option value="Sunlight-Essentials">Sunlight Essentials</option>
+        <option value="polo&tshirt">Polo & T-shirt</option>
+        <option value="Casual-shirt-pant">Casual Shirt & Pant</option>
+        <option value="Suit">Suit</option>
+        <option value="Bags&Pouches">Bags & Pouches</option>
+        <option value="Kitchen&Table">Kitchen & Table Linen</option>
+      </select>
+      <textarea name="customRequest" rows="5" placeholder="Describe your request..." required></textarea>
+      <button type="submit">Submit Order</button>
+      <div id="confirmation" class="confirmation"></div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("orderForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.getElementById("confirmation").textContent =
+        "Your made-to-order request has been received! We'll follow up via email.";
+      this.reset();
+    });
+  </script>
+
+  <footer>
+      <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+        <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
