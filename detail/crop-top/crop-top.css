@@ -772,15 +772,15 @@ footer {
 }
 .popup-overlay.active {   /* dark outside the cart popup  */
   opacity: 1;
-  visibility: visible;
+  visibility: visible;  
 }
 .popup-content {
   display: none;
-  position: relative;
+  position: absolute;
   background-color: white;
-  padding: 2rem;
-  /* max-width: 400px; */
-  /* width: 95%; */
+  padding: 1.8rem;
+  max-width: 450px;
+  /* max-width: 60%; */
   border-radius: 6px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
   animation: fadeIn 0.3s ease-in-out;
