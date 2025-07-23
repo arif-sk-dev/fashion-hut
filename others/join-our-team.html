@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Join Our Team</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+      line-height: 1.6;
+      background: #f8f9fa;
+      color: #333;
+    }
+
+    .hero {
+      background: linear-gradient(to right, #0077b6, #00b4d8);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem;
+    }
+
+    .hero h1 {
+      font-size: clamp(1.4rem, calc(3vw + .30rem), 2.2rem);
+      text-shadow: 0 0 10px black;
+      margin-bottom: .5rem;
+    }
+
+    .hero p {
+      font-size: clamp(1rem, calc(2vw + .17rem), 1.5rem);
+      text-shadow: 0 0 10px black;
+    }
+
+    .content {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .team-section {
+      margin-bottom: 2rem;
+    }
+
+    .team-section h2 {
+      font-size: clamp(1.1rem, calc(1.8vw + .17rem), 2rem);
+      margin-bottom: 0.3rem;
+      color: #023e8a;
+    }
+
+    .team-section p {
+      margin-bottom: 1.5rem;
+    }
+
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form label {
+      display: block;
+      margin: 0.5rem 0 0.2rem;
+      font-weight: bold;
+    }
+
+    form input,
+    form textarea,
+    form select {
+      width: 100%;
+      padding: 0.7rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      padding: 0.75rem 1.5rem;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    form button:hover {
+      background: #023e8a;
+    }
+
+  footer {
+    background-color: #333;
+    color: gray;
+    padding: 20px;
+    font-size: 12px;
+  }
+
+  .footer2 {
+    text-align: center;
+  }
+  .footer2 a:hover {
+    color: beige;
+  }
+
+    @media (max-width: 600px) {
+      /* .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      } */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hero">
+    <h1>Join Our Team</h1>
+    <p>We’re passionate, creative, and always looking for awesome people to grow with us.</p>
+  </div>
+
+  <div class="content">
+    <section class="team-section">
+      <h2>Why Work With Us?</h2>
+      <p>Be part of a diverse and dynamic team where your skills are valued and your voice matters. We believe in collaboration, creativity, and continuous learning.</p>
+    </section>
+
+    <section class="application-form">
+      <h2 style="font-size: clamp(1.1rem, calc(1.8vw + .17rem), 2rem); color: #023e8a;">Apply Now</h2>
+      <form>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" required />
+
+        <label for="role">Role Interested In</label>
+        <select id="role" required>
+          <option value="">Select a role</option>
+          <option value="frontend">Frontend Developer</option>
+          <option value="backend">Backend Developer</option>
+          <option value="designer">UI/UX Designer</option>
+          <option value="marketing">Marketing Specialist</option>
+        </select>
+
+        <label for="message">Tell us about yourself</label>
+        <textarea id="message" rows="6" required></textarea>
+
+        <button type="submit">Submit Application</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer2">
+        COPYRIGHT © <span id="year"></span> Fashion Hut. All Rights Reserved. <br>
+      <p>Developed by: <a href="https://www.linkedin.com/in/arif-713/">arif</a></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
